@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Placeholder Images</title>
+</head>
+<body>
+    <h1>Generating Images...</h1>
+    <div id="status"></div>
+
+    <script>
+        function createPlaceholderImage(width, height, text, bgColor = '#f8fafc', textColor = '#1f2937', fileName = 'placeholder.jpg') {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+
+            canvas.width = width;
+            canvas.height = height;
+
+            // Background
+            ctx.fillStyle = bgColor;
+            ctx.fillRect(0, 0, width, height);
+
+            // Add subtle gradient
+            const gradient = ctx.createLinearGradient(0, 0, width, height);
+            gradient.addColorStop(0, bgColor);
+            gradient.addColorStop(1, '#e2e8f0');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, width, height);
+
+            // Border
+            ctx.strokeStyle = '#d1d5db';
+            ctx.lineWidth = 2;
+            ctx.strokeRect(0, 0, width, height);
+
+            // Text
+            ctx.fillStyle = textColor;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+
+            // Multi-line text handling
+            const lines = text.split('\n');
+            const fontSize = Math.min(width / 12, height / 8, 32);
+            ctx.font = `${fontSize}px Arial, sans-serif`;
+
+            const lineHeight = fontSize * 1.2;
+            const totalHeight = lines.length * lineHeight;
+            const startY = (height - totalHeight) / 2 + lineHeight / 2;
+
+            lines.forEach((line, index) => {
+                ctx.fillText(line, width / 2, startY + (index * lineHeight));
+            });
+
+            // Add decorative elements for micropigmentation theme
+            if (text.includes('Sprâncene') || text.includes('Eyebrow')) {
+                // Draw eyebrow shape
+                ctx.strokeStyle = '#ec4899';
+                ctx.lineWidth = 3;
+                ctx.beginPath();
+                ctx.arc(width/2 - 30, height/2 + 30, 25, 0.3, 0.8);
+                ctx.arc(width/2 + 30, height/2 + 30, 25, 2.4, 2.9);
+                ctx.stroke();
+            } else if (text.includes('Buze') || text.includes('Lips')) {
+                // Draw lips shape
+                ctx.fillStyle = '#ec4899';
+                ctx.beginPath();
+                ctx.ellipse(width/2, height/2 + 40, 40, 15, 0, 0, 2 * Math.PI);
+                ctx.fill();
+            } else if (text.includes('Gallery') || text.includes('Work')) {
+                // Draw camera icon
+                ctx.strokeStyle = '#8b5cf6';
+                ctx.lineWidth = 2;
+                ctx.strokeRect(width/2 - 20, height/2 + 20, 40, 30);
+                ctx.beginPath();
+                ctx.arc(width/2, height/2 + 35, 10, 0, 2 * Math.PI);
+                ctx.stroke();
+            }
+
+            return canvas.toDataURL('image/jpeg', 0.8);
+        }
+
+        function downloadImage(dataUrl, filename) {
+            const link = document.createElement('a');
+            link.download = filename;
+            link.href = dataUrl;
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function updateStatus(message) {
+            document.getElementById('status').innerHTML += '<p>' + message + '</p>';
+        }
+
+        // Generate all images
+        setTimeout(() => {
+            const images = [
+                // Hero image
+                {
+                    name: 'hero-micropigmentare.jpg',
+                    width: 800,
+                    height: 600,
+                    text: 'Micropigmentare\nProfesională\nPloiești',
+                    bgColor: '#fdf2f8',
+                    textColor: '#ec4899'
+                },
+
+                // Service images
+                {
+                    name: 'service-sprancene.jpg',
+                    width: 400,
+                    height: 300,
+                    text: 'Micropigmentare\nSprâncene',
+                    bgColor: '#fff7ed',
+                    textColor: '#ea580c'
+                },
+                {
+                    name: 'service-buze.jpg',
+                    width: 400,
+                    height: 300,
+                    text: 'Micropigmentare\nBuze',
+                    bgColor: '#fef7f7',
+                    textColor: '#dc2626'
+                },
+                {
+                    name: 'service-eyeliner.jpg',
+                    width: 400,
+                    height: 300,
+                    text: 'Micropigmentare\nEyeliner',
+                    bgColor: '#f0f9ff',
+                    textColor: '#0284c7'
+                },
+                {
+                    name: 'service-laser.jpg',
+                    width: 400,
+                    height: 300,
+                    text: 'Îndepărtare\nTatuaj Laser',
+                    bgColor: '#f0fdf4',
+                    textColor: '#16a34a'
+                },
+
+                // Paula's portrait
+                {
+                    name: 'paula-lupu.jpg',
+                    width: 500,
+                    height: 600,
+                    text: 'Paula Lupu\nSpecialist\nMicropigmentare\nExperiență din 2016',
+                    bgColor: '#fdf4ff',
+                    textColor: '#a21caf'
+                },
+
+                // Logo
+                {
+                    name: 'logo.jpg',
+                    width: 200,
+                    height: 200,
+                    text: 'Paula\nLupu',
+                    bgColor: '#ec4899',
+                    textColor: '#ffffff'
+                }
+            ];
+
+            // Gallery images
+            const galleryTexts = [
+                'Sprâncene\nPowder',
+                'Micropigmentare\nBuze',
+                'Eyeliner\nPermanent',
+                'Îndepărtare\nLaser',
+                'Sprâncene\nNaturale',
+                'Buze\nNaturale',
+                'Sprâncene\nBold',
+                'Corecție'
+            ];
+
+            galleryTexts.forEach((text, index) => {
+                images.push({
+                    name: `gallery/work-${index + 1}.jpg`,
+                    width: 400,
+                    height: 400,
+                    text: text,
+                    bgColor: '#f8fafc',
+                    textColor: '#374151'
+                });
+            });
+
+            images.forEach(img => {
+                const dataUrl = createPlaceholderImage(
+                    img.width,
+                    img.height,
+                    img.text,
+                    img.bgColor,
+                    img.textColor,
+                    img.name
+                );
+                downloadImage(dataUrl, img.name);
+                updateStatus(`Generated: ${img.name}`);
+            });
+
+            updateStatus('<strong>All images generated! Check your Downloads folder.</strong>');
+            updateStatus('<strong>Move these images to assets/images/ in your project.</strong>');
+        }, 1000);
+    </script>
+</body>
+</html>

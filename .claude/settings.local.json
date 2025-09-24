@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mkdir:*)",
+      "Bash(npm install)",
+      "Bash(npm run dev:*)",
+      "WebFetch(domain:maps.app.goo.gl)",
+      "WebFetch(domain:www.facebook.com)",
+      "WebFetch(domain:www.instagram.com)",
+      "Bash(npm install:*)",
+      "Bash(npx tailwindcss init:*)",
+      "Bash(npm run build-css:*)",
+      "Bash(npx tailwindcss:*)",
+      "Bash(node:*)",
+      "Bash(npm uninstall:*)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(npx playwright:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

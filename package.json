@@ -1,0 +1,23 @@
+{
+  "name": "micropigmentation-website",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5200",
+    "build": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch & vite build",
+    "preview": "vite preview --port 5200",
+    "build-css": "tailwindcss -i ./assets/css/input.css -o ./assets/css/output.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.5.10",
+    "autoprefixer": "^10.4.21",
+    "playwright": "^1.55.1",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.13",
+    "vite": "^5.0.0"
+  },
+  "dependencies": {
+    "flowbite": "^3.1.2"
+  }
+}

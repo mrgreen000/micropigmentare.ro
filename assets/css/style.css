@@ -1,12 +1,19 @@
 /* Custom CSS for Micropigmentare Website */
 
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
 :root {
-    --primary-color: #ec4899;
-    --primary-hover: #db2777;
-    --secondary-color: #8b5cf6;
-    --text-dark: #111827;
-    --text-light: #6b7280;
-    --bg-light: #f9fafb;
+    --primary-color: #B29D8B;
+    --primary-hover: #A29282;
+    --secondary-color: #D8C8B8;
+    --text-dark: #4B4B4A;
+    --text-light: #A29282;
+    --bg-light: #F9F7F5;
+}
+
+/* Apply Karla font globally */
+* {
+    font-family: 'Karla', sans-serif;
 }
 
 /* Testimonials Carousel */
@@ -40,7 +47,7 @@
 .carousel-dots {
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 0.75rem;
     margin-top: 2rem;
 }
 
@@ -48,18 +55,54 @@
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background-color: #e5e7eb;
-    border: none;
+    background-color: var(--secondary-color);
+    border: 1px solid transparent;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-.carousel-dot.active {
-    background-color: #ec4899;
-    width: 24px;
-    border-radius: 5px;
+.carousel-dot:hover {
+    background-color: var(--primary-hover);
+    transform: scale(1.2);
 }
 
+.carousel-dot.active {
+    background-color: var(--primary-color);
+    width: 28px;
+    border-radius: 5px;
+    border-color: var(--primary-color);
+}
+
+
+/* Navigation active state */
+nav a {
+    transition: color 0.3s ease;
+}
+
+nav a.text-primary {
+    position: relative;
+    color: #B29D8B !important;
+}
+
+nav a.text-primary::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #B29D8B;
+    animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+    from {
+        transform: scaleX(0);
+    }
+    to {
+        transform: scaleX(1);
+    }
+}
 
 /* Smooth scroll behavior */
 html {
@@ -112,7 +155,7 @@ html {
 
 .service-card:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(236, 72, 153, 0.15);
+    box-shadow: 0 20px 40px rgba(178, 157, 139, 0.15);
 }
 
 .service-card:hover img {
@@ -123,8 +166,8 @@ html {
     transition: transform 0.3s ease;
 }
 
-.service-card:hover .text-pink-600 {
-    color: #db2777;
+.service-card:hover .text-primary {
+    color: var(--primary-hover);
 }
 
 /* Gallery image hover effects */
@@ -141,7 +184,7 @@ html {
 
 .gallery-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(236, 72, 153, 0.2);
+    box-shadow: 0 10px 25px rgba(178, 157, 139, 0.2);
 }
 
 .gallery-item:hover img {
@@ -155,7 +198,7 @@ html {
 /* WhatsApp floating button */
 .whatsapp-float {
     position: fixed;
-    bottom: 20px;
+    bottom: 90px;
     right: 20px;
     width: 60px;
     height: 60px;
@@ -186,8 +229,8 @@ html {
 
 .testimonial-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(236, 72, 153, 0.1);
-    border-color: rgba(236, 72, 153, 0.2);
+    box-shadow: 0 15px 35px rgba(178, 157, 139, 0.1);
+    border-color: rgba(178, 157, 139, 0.2);
 }
 
 .testimonial-card:hover .text-yellow-400 {
@@ -200,7 +243,28 @@ html {
 }
 
 .price-row:hover {
-    background-color: rgba(236, 72, 153, 0.05);
+    background-color: rgba(178, 157, 139, 0.05);
+}
+
+/* Price card hover effects */
+.pricing-card {
+    transition: all 0.3s ease;
+    border-radius: 0.75rem;
+}
+
+.pricing-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(178, 157, 139, 0.2);
+}
+
+.pricing-card:hover {
+    border-color: #B29D8B !important;
+}
+
+.pricing-card .absolute {
+    background-color: #B29D8B !important;
+    font-weight: 600;
+    letter-spacing: 0.05em;
 }
 
 /* Navigation scroll effect */
@@ -212,7 +276,7 @@ html {
 input:focus, select:focus, textarea:focus {
     outline: none;
     border-color: var(--primary-color);
-    box-shadow: 0 0 0 3px rgba(236, 72, 153, 0.1);
+    box-shadow: 0 0 0 3px rgba(178, 157, 139, 0.1);
 }
 
 /* Button hover effects */
@@ -224,7 +288,7 @@ input:focus, select:focus, textarea:focus {
 
 .btn-primary:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 8px 25px rgba(236, 72, 153, 0.4);
+    box-shadow: 0 8px 25px rgba(178, 157, 139, 0.4);
 }
 
 /* CTA Button specific effects */
@@ -251,7 +315,7 @@ input:focus, select:focus, textarea:focus {
 
 .cta-primary:hover {
     transform: translateY(-4px) scale(1.05);
-    box-shadow: 0 10px 30px rgba(236, 72, 153, 0.5);
+    box-shadow: 0 10px 30px rgba(178, 157, 139, 0.5);
 }
 
 .cta-secondary {
@@ -261,8 +325,8 @@ input:focus, select:focus, textarea:focus {
 
 .cta-secondary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(236, 72, 153, 0.2);
-    background-color: #ec4899;
+    box-shadow: 0 8px 20px rgba(178, 157, 139, 0.2);
+    background-color: var(--primary-color);
     color: white;
 }
 
@@ -431,12 +495,12 @@ input:focus, select:focus, textarea:focus {
 /* Scroll to top button */
 .scroll-to-top {
     position: fixed;
-    bottom: 80px;
+    bottom: 20px;
     right: 20px;
     background: var(--primary-color);
     color: white;
-    width: 40px;
-    height: 40px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     display: none;
     align-items: center;
@@ -444,11 +508,13 @@ input:focus, select:focus, textarea:focus {
     cursor: pointer;
     transition: all 0.3s ease;
     z-index: 98;
+    box-shadow: 0 4px 12px rgba(178, 157, 139, 0.3);
 }
 
 .scroll-to-top:hover {
     background: var(--primary-hover);
     transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(178, 157, 139, 0.4);
 }
 
 .scroll-to-top.show {
@@ -471,16 +537,16 @@ input:focus, select:focus, textarea:focus {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 12px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: var(--bg-light);
 }
 
 ::-webkit-scrollbar-thumb {
     background: var(--primary-color);
-    border-radius: 5px;
+    border-radius: 6px;
 }
 
 ::-webkit-scrollbar-thumb:hover {

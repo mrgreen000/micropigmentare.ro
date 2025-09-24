@@ -17,6 +17,17 @@
                     minHeight: {
                         '24': '6rem',
                         '96px': '96px'
+                    },
+                    colors: {
+                        primary: '#B29D8B',
+                        'primary-hover': '#A29282',
+                        secondary: '#D8C8B8',
+                        'text-dark': '#4B4B4A',
+                        'text-light': '#A29282',
+                        'bg-light': '#F9F7F5'
+                    },
+                    fontFamily: {
+                        'karla': ['Karla', 'sans-serif']
                     }
                 }
             }
@@ -26,6 +37,10 @@
     <link href="./assets/vendor/flowbite-pro/flowbite.min.css" rel="stylesheet" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts - Karla -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/css/style.css">
 
@@ -56,12 +71,9 @@
     <nav class="bg-white border-b border-gray-200 dark:bg-gray-900 fixed w-full z-50 top-0 start-0">
         <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <span class="self-center text-2xl font-semibold whitespace-nowrap text-pink-600">Paula Lupu</span>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap text-primary">Paula Lupu</span>
             </a>
             <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
-                <a href="https://api.whatsapp.com/send/?phone=40732163268&text&type=phone_number&app_absent=0" target="_blank" class="text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center whatsapp-btn">
-                    <i class="fab fa-whatsapp mr-2"></i>WhatsApp
-                </a>
                 <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
                     <span class="sr-only">Open main menu</span>
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -71,29 +83,29 @@
             </div>
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                 <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white">
-                    <li><a href="#acasa" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-pink-600 md:p-0">Acasă</a></li>
-                    <li><a href="#servicii" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-pink-600 md:p-0">Servicii</a></li>
-                    <li><a href="#despre" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-pink-600 md:p-0">Despre Mine</a></li>
-                    <li><a href="#preturi" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-pink-600 md:p-0">Prețuri</a></li>
-                    <li><a href="#galerie" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-pink-600 md:p-0">Galerie</a></li>
-                    <li><a href="#contact" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-pink-600 md:p-0">Contact</a></li>
+                    <li><a href="#acasa" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0">Acasă</a></li>
+                    <li><a href="#servicii" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0">Servicii</a></li>
+                    <li><a href="#despre" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0">Despre Mine</a></li>
+                    <li><a href="#preturi" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0">Prețuri</a></li>
+                    <li><a href="#galerie" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0">Galerie</a></li>
+                    <li><a href="#contact" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-primary md:p-0">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <!-- Offer Banner -->
-    <div class="bg-gradient-to-r from-pink-500 to-purple-600 text-white text-center py-2 mt-16">
+    <div class="text-white text-center py-2 mt-16" style="background: linear-gradient(to right, var(--primary-color), var(--secondary-color));">
         <p class="text-sm md:text-base">🎉 OFERTĂ SPECIALĂ: -20% la micropigmentare sprâncene până la 31 decembrie! 🎉</p>
     </div>
 
     <!-- Hero Section -->
-    <section id="acasa" class="bg-gradient-to-b from-pink-50 to-white pt-10 pb-20">
+    <section id="acasa" class="pt-10 pb-20" style="background: linear-gradient(to bottom, var(--bg-light), white);">
         <div class="max-w-screen-xl mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-8 items-center">
                 <div>
                     <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-                        Micropigmentare <span class="text-pink-600">Profesională</span> în Ploiești
+                        Micropigmentare <span class="text-primary">Profesională</span> în Ploiești
                     </h1>
                     <p class="text-lg text-gray-600 mb-8">
                         Experiență din 2016 în micropigmentare sprâncene, buze și eyeliner.
@@ -124,14 +136,14 @@
                                 </div>
                             </div>
                             <div class="ml-3 pl-3 border-l border-gray-200">
-                                <div class="text-lg font-bold text-pink-600">35</div>
+                                <div class="text-lg font-bold text-primary">35</div>
                                 <div class="text-xs text-gray-500">recenzii</div>
                             </div>
                         </div>
 
                         <!-- CTA Button -->
-                        <a href="#contact" class="text-white bg-pink-600 hover:bg-pink-700 focus:ring-4 focus:ring-pink-300 font-medium rounded-lg text-lg px-10 py-3.5 text-center cta-primary inline-flex items-center">
-                            <i class="fas fa-calendar-check mr-2"></i>
+                        <a href="#contact" class="text-white bg-primary hover:bg-primary-hover focus:ring-4 focus:ring-secondary font-medium rounded-lg text-lg px-10 py-3.5 text-center cta-primary inline-flex items-center">
+                            <i class="fas fa-calendar-check mr-2 text-primary"></i>
                             Programează-te Acum
                         </a>
                     </div>
@@ -162,7 +174,7 @@
                         <h3 class="text-lg font-semibold text-gray-900 mb-2">Micropigmentare Sprâncene</h3>
                         <p class="text-gray-600 text-sm mb-3 leading-relaxed">Tehnica clasică sau Powder Brows pentru sprâncene perfect definite și naturale. Rezultate de durată.</p>
                         <div class="flex justify-end">
-                            <a href="#contact" class="inline-flex items-center text-pink-600 hover:text-pink-700 font-medium text-sm">
+                            <a href="#contact" class="inline-flex items-center text-primary hover:text-primary-hover font-medium text-sm">
                                 Detalii <i class="fas fa-arrow-right ml-1"></i>
                             </a>
                         </div>
@@ -176,7 +188,7 @@
                         <h3 class="text-lg font-semibold text-gray-900 mb-2">Micropigmentare Buze</h3>
                         <p class="text-gray-600 text-sm mb-3 leading-relaxed">Contur perfect și culoare naturală pentru buze senzuale. Tehnică profesională cu pigmenți de calitate.</p>
                         <div class="flex justify-end">
-                            <a href="#contact" class="inline-flex items-center text-pink-600 hover:text-pink-700 font-medium text-sm">
+                            <a href="#contact" class="inline-flex items-center text-primary hover:text-primary-hover font-medium text-sm">
                                 Detalii <i class="fas fa-arrow-right ml-1"></i>
                             </a>
                         </div>
@@ -190,7 +202,7 @@
                         <h3 class="text-lg font-semibold text-gray-900 mb-2">Micropigmentare Eyeliner</h3>
                         <p class="text-gray-600 text-sm mb-3 leading-relaxed">Eyeliner permanent perfect aplicat pentru o privire expresivă. Traseu precis și aspect natural.</p>
                         <div class="flex justify-end">
-                            <a href="#contact" class="inline-flex items-center text-pink-600 hover:text-pink-700 font-medium text-sm">
+                            <a href="#contact" class="inline-flex items-center text-primary hover:text-primary-hover font-medium text-sm">
                                 Detalii <i class="fas fa-arrow-right ml-1"></i>
                             </a>
                         </div>
@@ -204,7 +216,7 @@
                         <h3 class="text-lg font-semibold text-gray-900 mb-2">Îndepărtare cu Laser</h3>
                         <p class="text-gray-600 text-sm mb-3 leading-relaxed">Îndepărtare sigură a tatuajului vechi cu tehnologie laser modernă. Procedură rapidă și eficientă.</p>
                         <div class="flex justify-end">
-                            <a href="#contact" class="inline-flex items-center text-pink-600 hover:text-pink-700 font-medium text-sm">
+                            <a href="#contact" class="inline-flex items-center text-primary hover:text-primary-hover font-medium text-sm">
                                 Detalii <i class="fas fa-arrow-right ml-1"></i>
                             </a>
                         </div>
@@ -286,30 +298,30 @@
                 </div>
                 <div>
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Despre Mine</h2>
-                    <h3 class="text-2xl font-semibold text-pink-600 mb-4">Paula Lupu</h3>
+                    <h3 class="text-2xl font-semibold text-primary mb-4">Paula Lupu</h3>
                     <p class="text-lg text-gray-600 mb-6">
                         Sunt Paula Lupu, specialist în micropigmentare cu experiență din 2016.
                         Pasiunea mea pentru frumusețe și perfecțiune se reflectă în fiecare lucrare pe care o realizez.
                     </p>
                     <div class="space-y-4 mb-8">
                         <div class="flex items-center">
-                            <i class="fas fa-check-circle text-pink-600 text-xl mr-3"></i>
+                            <i class="fas fa-check-circle text-primary text-xl mr-3"></i>
                             <span class="text-gray-700">Peste 8 ani de experiență în micropigmentare</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-check-circle text-pink-600 text-xl mr-3"></i>
+                            <i class="fas fa-check-circle text-primary text-xl mr-3"></i>
                             <span class="text-gray-700">Peste 1000 de cliente mulțumite</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-check-circle text-pink-600 text-xl mr-3"></i>
+                            <i class="fas fa-check-circle text-primary text-xl mr-3"></i>
                             <span class="text-gray-700">Certificări și cursuri de perfecționare continue</span>
                         </div>
                         <div class="flex items-center">
-                            <i class="fas fa-check-circle text-pink-600 text-xl mr-3"></i>
+                            <i class="fas fa-check-circle text-primary text-xl mr-3"></i>
                             <span class="text-gray-700">Produse și echipamente de înaltă calitate</span>
                         </div>
                     </div>
-                    <a href="#contact" class="inline-flex items-center text-white bg-pink-600 hover:bg-pink-700 focus:ring-4 focus:ring-pink-300 font-medium rounded-lg text-lg px-6 py-3 cta-primary">
+                    <a href="#contact" class="inline-flex items-center text-white bg-primary hover:bg-primary-hover focus:ring-4 focus:ring-secondary font-medium rounded-lg text-lg px-6 py-3 cta-primary">
                         Programează o Consultație
                         <i class="fas fa-arrow-right ml-2"></i>
                     </a>
@@ -351,7 +363,7 @@
                         </div>
                     </div>
                     <div class="ml-4 pl-4 border-l border-gray-200">
-                        <div class="text-2xl font-bold text-pink-600">35</div>
+                        <div class="text-2xl font-bold text-primary">35</div>
                         <div class="text-xs text-gray-500">recenzii verificate</div>
                     </div>
                 </div>
@@ -366,8 +378,8 @@
                     <div class="bg-white p-6 rounded-lg shadow-lg testimonial-card text-center flex flex-col h-full">
                     <!-- NAME -->
                     <div class="flex items-center justify-center mb-0">
-                        <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-3">
-                            <span class="text-pink-600 font-semibold text-lg">MG</span>
+                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-3">
+                            <span class="text-primary font-semibold text-lg">MG</span>
                         </div>
                         <div>
                             <h4 class="font-bold text-gray-900 text-lg mb-0 text-center">Maria Georgescu</h4>
@@ -408,8 +420,8 @@
                     <div class="bg-white p-6 rounded-lg shadow-lg testimonial-card text-center flex flex-col h-full">
                     <!-- NAME -->
                     <div class="flex items-center justify-center mb-0">
-                        <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-3">
-                            <span class="text-pink-600 font-semibold text-lg">AD</span>
+                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-3">
+                            <span class="text-primary font-semibold text-lg">AD</span>
                         </div>
                         <div>
                             <h4 class="font-bold text-gray-900 text-lg mb-0 text-center">Alexandra Dumitrescu</h4>
@@ -450,8 +462,8 @@
                     <div class="bg-white p-6 rounded-lg shadow-lg testimonial-card text-center flex flex-col h-full">
                     <!-- NAME -->
                     <div class="flex items-center justify-center mb-0">
-                        <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mr-3">
-                            <span class="text-pink-600 font-semibold text-lg">LM</span>
+                        <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mr-3">
+                            <span class="text-primary font-semibold text-lg">LM</span>
                         </div>
                         <div>
                             <h4 class="font-bold text-gray-900 text-lg mb-0 text-center">Laura Marinescu</h4>
@@ -498,7 +510,7 @@
         </div>
     </section>
 <!-- Pricing Section -->
-    <section id="preturi" class="pt-10 pb-20 bg-gray-50 mt-0">
+    <section id="preturi" class="pt-10 pb-20 bg-bg-light mt-0">
         <div class="max-w-screen-xl mx-auto px-4">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Prețuri Transparente</h2>
@@ -510,28 +522,28 @@
             <!-- Card-Based Pricing Design -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Card 1 - Micropigmentare Sprâncene -->
-                <div class="bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-pink-300 hover:shadow-2xl transition-all duration-300 group pricing-card relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-pink-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg">POPULAR</div>
+                <div class="bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-primary hover:shadow-2xl transition-all duration-300 group pricing-card relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-primary text-white px-3 py-1 text-xs font-bold rounded-bl-lg">POPULAR</div>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-pink-500 to-pink-600 rounded-full flex items-center justify-center mr-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
                                 <svg class="w-[31px] h-[31px] text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                     <path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"/>
                                     <path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-gray-900 group-hover:text-pink-600 transition-colors">Micropigmentare Sprâncene</h3>
+                                <h3 class="text-lg font-bold text-gray-500 group-hover:text-primary transition-colors">Micropigmentare Sprâncene</h3>
                                 <p class="text-sm text-gray-500">Tehnica clasică</p>
                             </div>
                         </div>
                         <p class="text-gray-600 text-sm mb-4">Prima ședință cu tehnica clasică pentru sprâncene perfect definite și naturale</p>
                         <div class="flex justify-between items-end">
                             <div>
-                                <span class="text-3xl font-bold text-pink-600">1200</span>
+                                <span class="text-3xl font-bold text-primary">1200</span>
                                 <span class="text-gray-500 text-sm ml-1">RON</span>
                             </div>
-                            <a href="#contact" class="text-pink-600 hover:text-pink-700 text-sm font-medium">
+                            <a href="#contact" class="text-primary hover:text-primary-hover text-sm font-medium">
                                 Rezervă <i class="fas fa-arrow-right ml-1"></i>
                             </a>
                         </div>
@@ -539,28 +551,28 @@
                 </div>
 
                 <!-- Card 2 - Powder Brows -->
-                <div class="bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-purple-300 hover:shadow-2xl transition-all duration-300 group pricing-card relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-purple-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg">TRENDING</div>
+                <div class="bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-primary hover:shadow-2xl transition-all duration-300 group pricing-card relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-primary text-white px-3 py-1 text-xs font-bold rounded-bl-lg">TRENDING</div>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
                                 <svg class="w-[31px] h-[31px] text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
   <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/>
 </svg>
 
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-gray-900 group-hover:text-purple-600 transition-colors">Sprâncene Powder</h3>
+                                <h3 class="text-lg font-bold text-gray-500 group-hover:text-primary transition-colors">Sprâncene Powder</h3>
                                 <p class="text-sm text-gray-500">Tehnica modernă</p>
                             </div>
                         </div>
                         <p class="text-gray-600 text-sm mb-4">Prima ședință cu tehnica Powder Brows pentru un efect ombré natural</p>
                         <div class="flex justify-between items-end">
                             <div>
-                                <span class="text-3xl font-bold text-purple-600">1200</span>
+                                <span class="text-3xl font-bold text-primary">1200</span>
                                 <span class="text-gray-500 text-sm ml-1">RON</span>
                             </div>
-                            <a href="#contact" class="text-purple-600 hover:text-purple-700 text-sm font-medium">
+                            <a href="#contact" class="text-primary hover:text-primary-hover text-sm font-medium">
                                 Rezervă <i class="fas fa-arrow-right ml-1"></i>
                             </a>
                         </div>
@@ -568,27 +580,27 @@
                 </div>
 
                 <!-- Card 3 - Micropigmentare Buze -->
-                <div class="bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-red-300 hover:shadow-2xl transition-all duration-300 group pricing-card relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-red-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg">PREMIUM</div>
+                <div class="bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-primary hover:shadow-2xl transition-all duration-300 group pricing-card relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-primary text-white px-3 py-1 text-xs font-bold rounded-bl-lg">PREMIUM</div>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-red-500 to-red-600 rounded-full flex items-center justify-center mr-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
                                 <svg class="w-[26px] h-[26px] text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.122 17.645a7.185 7.185 0 0 1-2.656 2.495 7.06 7.06 0 0 1-3.52.853 6.617 6.617 0 0 1-3.306-.718 6.73 6.73 0 0 1-2.54-2.266c-2.672-4.57.287-8.846.887-9.668A4.448 4.448 0 0 0 8.07 6.31 4.49 4.49 0 0 0 7.997 4c1.284.965 6.43 3.258 5.525 10.631 1.496-1.136 2.7-3.046 2.846-6.216 1.43 1.061 3.985 5.462 1.754 9.23Z"/>
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-gray-900 group-hover:text-red-600 transition-colors">Micropigmentare Buze</h3>
+                                <h3 class="text-lg font-bold text-gray-500 group-hover:text-primary transition-colors">Micropigmentare Buze</h3>
                                 <p class="text-sm text-gray-500">Contur & culoare</p>
                             </div>
                         </div>
                         <p class="text-gray-600 text-sm mb-4">Prima ședință pentru contur perfect și culoare naturală</p>
                         <div class="flex justify-between items-end">
                             <div>
-                                <span class="text-3xl font-bold text-red-600">1200</span>
+                                <span class="text-3xl font-bold text-primary">1200</span>
                                 <span class="text-gray-500 text-sm ml-1">RON</span>
                             </div>
-                            <a href="#contact" class="text-red-600 hover:text-red-700 text-sm font-medium">
+                            <a href="#contact" class="text-primary hover:text-primary-hover text-sm font-medium">
                                 Rezervă <i class="fas fa-arrow-right ml-1"></i>
                             </a>
                         </div>
@@ -596,28 +608,28 @@
                 </div>
 
                 <!-- Card 4 - Retuș Sprâncene -->
-                <div class="bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-green-300 hover:shadow-2xl transition-all duration-300 group pricing-card relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-green-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg">INCLUS</div>
+                <div class="bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-primary hover:shadow-2xl transition-all duration-300 group pricing-card relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-primary text-white px-3 py-1 text-xs font-bold rounded-bl-lg">INCLUS</div>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mr-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
                                 <svg class="w-[31px] h-[31px] text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                     <path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"/>
                                     <path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-gray-900 group-hover:text-green-600 transition-colors">Retuș Sprâncene</h3>
+                                <h3 class="text-lg font-bold text-gray-500 group-hover:text-primary transition-colors">Retuș Sprâncene</h3>
                                 <p class="text-sm text-gray-500">Perfecționare</p>
                             </div>
                         </div>
                         <p class="text-gray-600 text-sm mb-4">Retuș în maxim 4 săptămâni pentru perfecționarea rezultatului</p>
                         <div class="flex justify-between items-end">
                             <div>
-                                <span class="text-3xl font-bold text-green-600">300</span>
+                                <span class="text-3xl font-bold text-primary">300</span>
                                 <span class="text-gray-500 text-sm ml-1">RON</span>
                             </div>
-                            <a href="#contact" class="text-green-600 hover:text-green-700 text-sm font-medium">
+                            <a href="#contact" class="text-primary hover:text-primary-hover text-sm font-medium">
                                 Rezervă <i class="fas fa-arrow-right ml-1"></i>
                             </a>
                         </div>
@@ -625,26 +637,26 @@
                 </div>
 
                 <!-- Card 5 - Retuș Buze -->
-                <div class="bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-green-300 hover:shadow-2xl transition-all duration-300 group pricing-card relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-green-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg">INCLUS</div>
+                <div class="bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-primary hover:shadow-2xl transition-all duration-300 group pricing-card relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-primary text-white px-3 py-1 text-xs font-bold rounded-bl-lg">INCLUS</div>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mr-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
                                 <svg class="w-[26px] h-[26px] text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                                     <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.122 17.645a7.185 7.185 0 0 1-2.656 2.495 7.06 7.06 0 0 1-3.52.853 6.617 6.617 0 0 1-3.306-.718 6.73 6.73 0 0 1-2.54-2.266c-2.672-4.57.287-8.846.887-9.668A4.448 4.448 0 0 0 8.07 6.31 4.49 4.49 0 0 0 7.997 4c1.284.965 6.43 3.258 5.525 10.631 1.496-1.136 2.7-3.046 2.846-6.216 1.43 1.061 3.985 5.462 1.754 9.23Z"/>
                                 </svg>                            </div>
                             <div>
-                                <h3 class="text-lg font-bold text-gray-900 group-hover:text-green-600 transition-colors">Retuș Buze</h3>
+                                <h3 class="text-lg font-bold text-gray-500 group-hover:text-primary transition-colors">Retuș Buze</h3>
                                 <p class="text-sm text-gray-500">Perfecționare</p>
                             </div>
                         </div>
                         <p class="text-gray-600 text-sm mb-4">Retuș în maxim 4 săptămâni pentru perfecționarea culorii</p>
                         <div class="flex justify-between items-end">
                             <div>
-                                <span class="text-3xl font-bold text-green-600">300</span>
+                                <span class="text-3xl font-bold text-primary">300</span>
                                 <span class="text-gray-500 text-sm ml-1">RON</span>
                             </div>
-                            <a href="#contact" class="text-green-600 hover:text-green-700 text-sm font-medium">
+                            <a href="#contact" class="text-primary hover:text-primary-hover text-sm font-medium">
                                 Rezervă <i class="fas fa-arrow-right ml-1"></i>
                             </a>
                         </div>
@@ -652,27 +664,27 @@
                 </div>
 
                 <!-- Card 6 - Laser Removal -->
-                <div class="bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-blue-300 hover:shadow-2xl transition-all duration-300 group pricing-card relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-blue-500 text-white px-3 py-1 text-xs font-bold rounded-bl-lg">LASER</div>
+                <div class="bg-white rounded-xl shadow-lg border-2 border-transparent hover:border-primary hover:shadow-2xl transition-all duration-300 group pricing-card relative overflow-hidden">
+                    <div class="absolute top-0 right-0 bg-primary text-white px-3 py-1 text-xs font-bold rounded-bl-lg">LASER</div>
                     <div class="p-6">
                         <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
+                            <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-4">
                                 <svg class="w-[26px] h-[26px] text-white dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
                                     <path fill-rule="evenodd" d="M14 4.182A4.136 4.136 0 0 1 16.9 3c1.087 0 2.13.425 2.899 1.182A4.01 4.01 0 0 1 21 7.037c0 1.068-.43 2.092-1.194 2.849L18.5 11.214l-5.8-5.71 1.287-1.31.012-.012Zm-2.717 2.763L6.186 12.13l2.175 2.141 5.063-5.218-2.141-2.108Zm-6.25 6.886-1.98 5.849a.992.992 0 0 0 .245 1.026 1.03 1.03 0 0 0 1.043.242L10.282 19l-5.25-5.168Zm6.954 4.01 5.096-5.186-2.218-2.183-5.063 5.218 2.185 2.15Z" clip-rule="evenodd"/>
                                 </svg>
                             </div>
                             <div>
-                                <h3 class="text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors">Îndepărtare Laser</h3>
+                                <h3 class="text-lg font-bold text-gray-500 group-hover:text-primary transition-colors">Îndepărtare Laser</h3>
                                 <p class="text-sm text-gray-500">Tehnologie avansată</p>
                             </div>
                         </div>
                         <p class="text-gray-600 text-sm mb-4">Îndepărtare tatuaj vechi cu tehnologie laser modernă</p>
                         <div class="flex justify-between items-end">
                             <div>
-                                <span class="text-3xl font-bold text-blue-600">300</span>
+                                <span class="text-3xl font-bold text-primary">300</span>
                                 <span class="text-gray-500 text-sm ml-1">RON</span>
                             </div>
-                            <a href="#contact" class="text-blue-600 hover:text-blue-700 text-sm font-medium">
+                            <a href="#contact" class="text-primary hover:text-primary-hover text-sm font-medium">
                                 Rezervă <i class="fas fa-arrow-right ml-1"></i>
                             </a>
                         </div>
@@ -681,18 +693,18 @@
             </div>
 
             <!-- Pricing Info Bar -->
-            <div class="mt-8 bg-gradient-to-r from-pink-50 via-white to-purple-50 rounded-xl p-6 border border-pink-100">
+            <div class="mt-8 bg-gradient-to-r from-bg-light via-white to-secondary rounded-xl p-6 border border-secondary">
                 <div class="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
                     <div class="flex items-center text-gray-700">
-                        <i class="fas fa-shield-alt text-pink-500 text-xl mr-3"></i>
+                        <i class="fas fa-shield-alt text-primary text-xl mr-3"></i>
                         <span class="font-medium">Toate prețurile includ materialele premium și garanția calității</span>
                     </div>
                     <div class="flex flex-wrap items-center gap-6">
-                        <div class="flex items-center text-green-600">
+                        <div class="flex items-center text-primary">
                             <i class="fas fa-check-circle mr-2"></i>
                             <span class="font-medium">Fără costuri ascunse</span>
                         </div>
-                        <div class="flex items-center text-purple-600">
+                        <div class="flex items-center text-primary">
                             <i class="fas fa-heart mr-2"></i>
                             <span class="font-medium">Satisfacție garantată</span>
                         </div>
@@ -701,9 +713,9 @@
             </div>
 
             <div class="mt-10 text-center">
-                <a href="#contact" class="inline-flex items-center text-white bg-pink-600 hover:bg-pink-700 focus:ring-4 focus:ring-pink-300 font-medium rounded-lg text-lg px-8 py-4 cta-primary">
+                <a href="#contact" class="inline-flex items-center text-white bg-primary hover:bg-primary-hover focus:ring-4 focus:ring-secondary font-medium rounded-lg text-lg px-8 py-4 cta-primary">
                     Rezervă Acum
-                    <i class="fas fa-calendar-check ml-2"></i>
+                    <i class="fas fa-calendar-check ml-2 text-primary"></i>
                 </a>
             </div>
 
@@ -711,16 +723,16 @@
             <div class="mt-16 max-w-4xl mx-auto">
                 <div class="bg-white rounded-2xl shadow-xl border border-gray-100 p-8">
                     <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center">
-                        <i class="fas fa-calendar-alt text-pink-600 mr-2"></i>
+                        <i class="fas fa-calendar-alt text-primary mr-2"></i>
                         Vezi Disponibilitatea
                     </h3>
                     <p class="text-gray-600 text-center mb-6">Alege o zi și oră care ți se potrivește pentru programare</p>
 
                     <!-- Calendar Placeholder - Replace with Calendly or Google Calendar -->
-                    <div id="calendar-widget" class="bg-gray-50 rounded-lg p-8 min-h-[400px] flex items-center justify-center">
+                    <div id="calendar-widget" class="bg-bg-light rounded-lg p-8 min-h-[400px] flex items-center justify-center border border-secondary">
                         <div class="text-center">
                             <div class="mb-4">
-                                <svg class="w-16 h-16 mx-auto text-pink-500 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <svg class="w-16 h-16 mx-auto text-primary mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
                                 </svg>
                             </div>
@@ -733,7 +745,7 @@
                                 <div class="space-y-2 text-sm text-gray-600">
                                     <div class="flex justify-between items-center py-2 border-b border-gray-100">
                                         <span class="font-medium">Luni - Vineri:</span>
-                                        <span class="text-pink-600">10:00 - 16:00</span>
+                                        <span class="text-primary">10:00 - 16:00</span>
                                     </div>
                                     <div class="flex justify-between items-center py-2 border-b border-gray-100">
                                         <span class="font-medium">Sâmbătă:</span>
@@ -744,9 +756,9 @@
                                         <span class="text-gray-400">Închis</span>
                                     </div>
                                 </div>
-                                <div class="mt-4 p-3 bg-pink-50 rounded-lg">
-                                    <p class="text-xs text-pink-700">
-                                        <i class="fas fa-info-circle mr-1"></i>
+                                <div class="mt-4 p-3 bg-bg-light rounded-lg">
+                                    <p class="text-xs text-primary font-medium">
+                                        <i class="fas fa-info-circle mr-1 text-primary"></i>
                                         Pentru programări urgente, contactează-mă direct pe WhatsApp
                                     </p>
                                 </div>
@@ -783,9 +795,9 @@
                 <!-- Direct Contact Cards -->
                 <div class="grid md:grid-cols-2 gap-6 mb-8">
                     <!-- WhatsApp Card -->
-                    <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-xl p-6 border border-green-200">
+                    <div class="bg-gradient-to-br from-bg-light to-secondary rounded-xl p-6 border border-secondary">
                         <div class="flex items-center mb-4">
-                            <div class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center mr-4">
+                            <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mr-4">
                                 <i class="fab fa-whatsapp text-white text-2xl"></i>
                             </div>
                             <div>
@@ -796,16 +808,16 @@
                         <p class="text-gray-700 mb-4">Scrie-mi direct pentru programări sau întrebări. Răspund în maximum 1 oră în timpul programului.</p>
                         <a href="https://api.whatsapp.com/send/?phone=40732163268&text=Bună! Aș dori să fac o programare pentru micropigmentare.&type=phone_number&app_absent=0"
                            target="_blank"
-                           class="w-full inline-flex items-center justify-center text-white bg-green-500 hover:bg-green-600 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-base px-6 py-3 transition-all">
+                           class="w-full inline-flex items-center justify-center text-white bg-primary hover:bg-primary-hover focus:ring-4 focus:ring-secondary font-medium rounded-lg text-base px-6 py-3 transition-all">
                             <i class="fab fa-whatsapp mr-2"></i>
                             Scrie pe WhatsApp
                         </a>
                     </div>
 
                     <!-- Phone Card -->
-                    <div class="bg-gradient-to-br from-pink-50 to-pink-100 rounded-xl p-6 border border-pink-200">
+                    <div class="bg-gradient-to-br from-[#F9F7F5] to-[#D8C8B8] rounded-xl p-6 border border-secondary">
                         <div class="flex items-center mb-4">
-                            <div class="w-14 h-14 bg-pink-500 rounded-full flex items-center justify-center mr-4">
+                            <div class="w-14 h-14 bg-primary rounded-full flex items-center justify-center mr-4">
                                 <i class="fas fa-phone text-white text-xl"></i>
                             </div>
                             <div>
@@ -815,7 +827,7 @@
                         </div>
                         <p class="text-gray-700 mb-4">Sună-mă direct pentru consultații rapide sau programări urgente.</p>
                         <a href="tel:+40732163268"
-                           class="w-full inline-flex items-center justify-center text-white bg-pink-600 hover:bg-pink-700 focus:ring-4 focus:ring-pink-300 font-medium rounded-lg text-base px-6 py-3 transition-all">
+                           class="w-full inline-flex items-center justify-center text-white bg-primary hover:bg-primary-hover focus:ring-4 focus:ring-secondary font-medium rounded-lg text-base px-6 py-3 transition-all">
                             <i class="fas fa-phone mr-2"></i>
                             Sună Acum: 0732 163 268
                         </a>
@@ -827,8 +839,8 @@
                     <div class="grid md:grid-cols-3 gap-6">
                         <!-- Address -->
                         <div class="text-center">
-                            <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                                <i class="fas fa-map-marker-alt text-pink-600 text-xl"></i>
+                            <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-map-marker-alt text-primary text-xl"></i>
                             </div>
                             <h4 class="font-semibold text-gray-900 mb-2">Adresă Salon</h4>
                             <p class="text-gray-600 text-sm">
@@ -839,8 +851,8 @@
 
                         <!-- Schedule -->
                         <div class="text-center">
-                            <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                                <i class="fas fa-clock text-pink-600 text-xl"></i>
+                            <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-clock text-primary text-xl"></i>
                             </div>
                             <h4 class="font-semibold text-gray-900 mb-2">Program</h4>
                             <p class="text-gray-600 text-sm">
@@ -851,21 +863,21 @@
 
                         <!-- Social Media -->
                         <div class="text-center">
-                            <div class="w-12 h-12 bg-pink-100 rounded-full flex items-center justify-center mx-auto mb-3">
-                                <i class="fas fa-share-alt text-pink-600 text-xl"></i>
+                            <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center mx-auto mb-3">
+                                <i class="fas fa-share-alt text-primary text-xl"></i>
                             </div>
                             <h4 class="font-semibold text-gray-900 mb-2">Social Media</h4>
                             <div class="flex justify-center space-x-3">
                                 <a href="https://www.facebook.com/browsbypaula/" target="_blank"
-                                   class="w-10 h-10 bg-blue-600 hover:bg-blue-700 rounded-full flex items-center justify-center text-white transition-all">
+                                   class="w-10 h-10 bg-primary hover:bg-primary-hover rounded-full flex items-center justify-center text-white transition-all">
                                     <i class="fab fa-facebook-f"></i>
                                 </a>
                                 <a href="https://www.instagram.com/micropigmentare.ploiesti" target="_blank"
-                                   class="w-10 h-10 bg-gradient-to-br from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 rounded-full flex items-center justify-center text-white transition-all">
+                                   class="w-10 h-10 bg-primary hover:bg-primary-hover rounded-full flex items-center justify-center text-white transition-all">
                                     <i class="fab fa-instagram"></i>
                                 </a>
                                 <a href="https://www.tiktok.com/@paulalupu" target="_blank"
-                                   class="w-10 h-10 bg-black hover:bg-gray-800 rounded-full flex items-center justify-center text-white transition-all">
+                                   class="w-10 h-10 bg-primary hover:bg-primary-hover rounded-full flex items-center justify-center text-white transition-all">
                                     <i class="fab fa-tiktok"></i>
                                 </a>
                             </div>
@@ -873,8 +885,8 @@
                     </div>
 
                     <!-- Call to Action -->
-                    <div class="mt-8 p-4 bg-pink-50 rounded-lg text-center">
-                        <p class="text-sm text-pink-700">
+                    <div class="mt-8 p-4 bg-bg-light rounded-lg text-center">
+                        <p class="text-sm text-primary">
                             <i class="fas fa-info-circle mr-2"></i>
                             Prefer comunicarea pe WhatsApp pentru o programare mai rapidă și eficientă
                         </p>
@@ -891,13 +903,13 @@
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nume Complet *</label>
                                 <input type="text" id="name" name="name" required
-                                       class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"
+                                       class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"
                                        placeholder="Maria Popescu">
                             </div>
                             <div>
                                 <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Telefon *</label>
                                 <input type="tel" id="phone" name="phone" required
-                                       class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"
+                                       class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"
                                        placeholder="0732 123 456">
                             </div>
                         </div>
@@ -905,7 +917,7 @@
                         <div class="mt-4">
                             <label for="service" class="block text-sm font-medium text-gray-700 mb-2">Serviciu Dorit *</label>
                             <select id="service" name="service" required
-                                    class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500">
+                                    class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary">
                                 <option value="">Alege serviciul...</option>
                                 <option>Micropigmentare Sprâncene</option>
                                 <option>Micropigmentare Sprâncene - Powder</option>
@@ -919,13 +931,13 @@
                         <div class="mt-4">
                             <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Mesaj (Opțional)</label>
                             <textarea id="message" name="message" rows="3"
-                                      class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-pink-500 focus:border-pink-500"
+                                      class="w-full px-4 py-2.5 border border-gray-300 rounded-lg focus:ring-primary focus:border-primary"
                                       placeholder="Detalii adiționale despre ce îți dorești..."></textarea>
                         </div>
 
                         <div class="mt-6 flex flex-col sm:flex-row gap-4">
                             <button type="submit"
-                                    class="flex-1 text-white bg-pink-600 hover:bg-pink-700 focus:ring-4 focus:ring-pink-300 font-medium rounded-lg text-base px-6 py-3 transition-all">
+                                    class="flex-1 text-white bg-primary hover:bg-primary-hover focus:ring-4 focus:ring-secondary font-medium rounded-lg text-base px-6 py-3 transition-all">
                                 <i class="fas fa-paper-plane mr-2"></i>
                                 Trimite Cererea
                             </button>
@@ -967,7 +979,7 @@
         <div class="max-w-screen-xl mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
                 <div class="mt-4">
-                    <h3 class="text-2xl font-bold text-pink-400 mb-4">Paula Lupu</h3>
+                    <h3 class="text-2xl font-bold text-primary mb-4">Paula Lupu</h3>
                     <p class="text-gray-400">
                         Specialist în micropigmentare cu experiență din 2016.
                         Frumusețea ta, pasiunea mea.
@@ -977,36 +989,36 @@
                 <div class="mt-4">
                     <h4 class="text-lg font-semibold mb-4">Servicii</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#servicii" class="hover:text-pink-400">Micropigmentare Sprâncene</a></li>
-                        <li><a href="#servicii" class="hover:text-pink-400">Micropigmentare Buze</a></li>
-                        <li><a href="#servicii" class="hover:text-pink-400">Micropigmentare Eyeliner</a></li>
-                        <li><a href="#servicii" class="hover:text-pink-400">Îndepărtare cu Laser</a></li>
+                        <li><a href="#servicii" class="hover:text-primary">Micropigmentare Sprâncene</a></li>
+                        <li><a href="#servicii" class="hover:text-primary">Micropigmentare Buze</a></li>
+                        <li><a href="#servicii" class="hover:text-primary">Micropigmentare Eyeliner</a></li>
+                        <li><a href="#servicii" class="hover:text-primary">Îndepărtare cu Laser</a></li>
                     </ul>
                 </div>
 
                 <div class="mt-4">
                     <h4 class="text-lg font-semibold mb-4">Link-uri Utile</h4>
                     <ul class="space-y-2 text-gray-400">
-                        <li><a href="#despre" class="hover:text-pink-400">Despre Mine</a></li>
-                        <li><a href="#preturi" class="hover:text-pink-400">Prețuri</a></li>
-                        <li><a href="#galerie" class="hover:text-pink-400">Portofoliu</a></li>
-                        <li><a href="#contact" class="hover:text-pink-400">Contact</a></li>
+                        <li><a href="#despre" class="hover:text-primary">Despre Mine</a></li>
+                        <li><a href="#preturi" class="hover:text-primary">Prețuri</a></li>
+                        <li><a href="#galerie" class="hover:text-primary">Portofoliu</a></li>
+                        <li><a href="#contact" class="hover:text-primary">Contact</a></li>
                     </ul>
                 </div>
 
                 <div class="mt-4">
                     <h4 class="text-lg font-semibold mb-4">Urmărește-mă</h4>
                     <div class="flex space-x-4 mb-4">
-                        <a href="https://www.facebook.com/browsbypaula/" target="_blank" class="text-gray-400 hover:text-pink-400">
+                        <a href="https://www.facebook.com/browsbypaula/" target="_blank" class="text-gray-400 hover:text-primary">
                             <i class="fab fa-facebook text-2xl"></i>
                         </a>
-                        <a href="https://www.instagram.com/micropigmentare.ploiesti" target="_blank" class="text-gray-400 hover:text-pink-400">
+                        <a href="https://www.instagram.com/micropigmentare.ploiesti" target="_blank" class="text-gray-400 hover:text-primary">
                             <i class="fab fa-instagram text-2xl"></i>
                         </a>
-                        <a href="https://www.tiktok.com/@paulalupu" target="_blank" class="text-gray-400 hover:text-pink-400">
+                        <a href="https://www.tiktok.com/@paulalupu" target="_blank" class="text-gray-400 hover:text-primary">
                             <i class="fab fa-tiktok text-2xl"></i>
                         </a>
-                        <a href="https://api.whatsapp.com/send/?phone=40732163268&text&type=phone_number&app_absent=0" target="_blank" class="text-gray-400 hover:text-pink-400">
+                        <a href="https://api.whatsapp.com/send/?phone=40732163268&text&type=phone_number&app_absent=0" target="_blank" class="text-gray-400 hover:text-primary">
                             <i class="fab fa-whatsapp text-2xl"></i>
                         </a>
                     </div>

@@ -352,25 +352,39 @@ function setActiveNavItem() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('nav a[href^="#"]');
 
-    window.addEventListener('scroll', () => {
+    // Function to update active nav item
+    const updateActiveItem = () => {
         let current = '';
 
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
 
-            if (scrollY >= sectionTop - 200) {
+            if (window.scrollY >= sectionTop - 200) {
                 current = section.getAttribute('id');
             }
         });
 
+        // If no section is active (at the very top), default to first section
+        if (!current && sections.length > 0) {
+            current = sections[0].getAttribute('id');
+        }
+
         navLinks.forEach(link => {
-            link.classList.remove('text-pink-600');
+            link.classList.remove('text-primary', 'font-semibold', 'border-b-2', 'border-primary');
+            link.style.color = ''; // Reset inline color
             if (link.getAttribute('href').slice(1) === current) {
-                link.classList.add('text-pink-600');
+                link.classList.add('text-primary', 'font-semibold');
+                link.style.color = '#B29D8B'; // Explicitly set brown color
             }
         });
-    });
+    };
+
+    // Set initial active state
+    updateActiveItem();
+
+    // Update on scroll
+    window.addEventListener('scroll', updateActiveItem);
 }
 
 setActiveNavItem();

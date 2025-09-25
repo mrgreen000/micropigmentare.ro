@@ -14,7 +14,8 @@
       "Bash(node:*)",
       "Bash(npm uninstall:*)",
       "WebFetch(domain:raw.githubusercontent.com)",
-      "Bash(npx playwright:*)"
+      "Bash(npx playwright:*)",
+      "Bash(npm run build:*)"
     ],
     "deny": [],
     "ask": []

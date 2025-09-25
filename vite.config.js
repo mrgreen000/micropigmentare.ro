@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite';
+import { viteStaticCopy } from 'vite-plugin-static-copy';
 
 export default defineConfig({
   base: '/micropigmentare-site/',
@@ -7,6 +8,16 @@ export default defineConfig({
     open: true,
     host: true
   },
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'assets/**/*',
+          dest: 'assets'
+        }
+      ]
+    })
+  ],
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
@@ -14,8 +25,11 @@ export default defineConfig({
       input: {
         main: './index.html'
       }
-    },
-    copyPublicDir: true
+    }
   },
-  publicDir: 'public'
+  experimental: {
+    renderBuiltUrl(filename) {
+      return '/micropigmentare-site/' + filename;
+    }
+  }
 });

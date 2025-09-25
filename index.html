@@ -1034,6 +1034,28 @@
         </div>
     </footer>
 
+    <!-- Fix for missing theme toggle elements -->
+    <script>
+        // Prevent theme toggle errors when elements don't exist
+        if (typeof window !== 'undefined') {
+            window.addEventListener('DOMContentLoaded', function() {
+                // Create dummy elements if they don't exist to prevent errors
+                if (!document.getElementById('theme-toggle-dark-icon')) {
+                    const dummyDark = document.createElement('div');
+                    dummyDark.id = 'theme-toggle-dark-icon';
+                    dummyDark.style.display = 'none';
+                    document.body.appendChild(dummyDark);
+                }
+                if (!document.getElementById('theme-toggle-light-icon')) {
+                    const dummyLight = document.createElement('div');
+                    dummyLight.id = 'theme-toggle-light-icon';
+                    dummyLight.style.display = 'none';
+                    document.body.appendChild(dummyLight);
+                }
+            });
+        }
+    </script>
+
     <!-- Flowbite Pro JS -->
     <script src="/assets/vendor/flowbite-pro/flowbite.min.js"></script>
     <!-- Custom JS -->

@@ -11,9 +11,9 @@
     --bg-light: #F9F7F5;
 }
 
-/* Apply Karla font globally */
+/* Apply Yeseva One font globally */
 * {
-    font-family: 'Karla', sans-serif;
+    font-family: 'Yeseva One', serif;
 }
 
 /* Testimonials Carousel */

@@ -3,7 +3,7 @@ import tailwind from '@astrojs/tailwind';
 
 export default defineConfig({
   site: 'https://micropigmentaresprancene.ro',
-  base: '/',
+  base: '/micropigmentare.ro/',
   integrations: [tailwind()],
   server: {
     port: 5200,

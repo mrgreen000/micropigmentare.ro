@@ -139,6 +139,11 @@ async function checkGoogleCalendarAvailability(weekStart) {
                 })
             ]);
 
+            console.log(`Date: ${dateKey}`);
+            console.log(`  Morning (${morningStart.toISOString()} - ${morningEnd.toISOString()}): ${morningEvents.data.items.length} events`);
+            console.log(`  Midday (${middayStart.toISOString()} - ${middayEnd.toISOString()}): ${middayEvents.data.items.length} events`);
+            console.log(`  Afternoon (${afternoonStart.toISOString()} - ${afternoonEnd.toISOString()}): ${afternoonEvents.data.items.length} events`);
+
             availability[dateKey] = {
                 morning: morningEvents.data.items.length === 0,
                 midday: middayEvents.data.items.length === 0,

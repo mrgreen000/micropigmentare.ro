@@ -96,23 +96,21 @@ async function checkGoogleCalendarAvailability(weekStart) {
             date.setDate(weekStart.getDate() + i);
             const dateKey = date.toISOString().split('T')[0];
 
-            // Check morning slot (10:00-13:00, 180 min)
-            const morningStart = new Date(date);
-            morningStart.setHours(10, 0, 0, 0);
-            const morningEnd = new Date(date);
-            morningEnd.setHours(13, 0, 0, 0);
+            // Create dates in Romanian timezone (Europe/Bucharest)
+            // Use UTC date string and manually add Romanian time to ensure correct timezone
+            const dateStr = date.toISOString().split('T')[0]; // YYYY-MM-DD
 
-            // Check midday slot (13:00-13:30, 30 min - Laser only)
-            const middayStart = new Date(date);
-            middayStart.setHours(13, 0, 0, 0);
-            const middayEnd = new Date(date);
-            middayEnd.setHours(13, 30, 0, 0);
+            // Check morning slot (10:00-13:00 Bucharest time, 180 min)
+            const morningStart = new Date(`${dateStr}T10:00:00+03:00`);
+            const morningEnd = new Date(`${dateStr}T13:00:00+03:00`);
 
-            // Check afternoon slot (13:30-16:30, 180 min)
-            const afternoonStart = new Date(date);
-            afternoonStart.setHours(13, 30, 0, 0);
-            const afternoonEnd = new Date(date);
-            afternoonEnd.setHours(16, 30, 0, 0);
+            // Check midday slot (13:00-13:30 Bucharest time, 30 min - Laser only)
+            const middayStart = new Date(`${dateStr}T13:00:00+03:00`);
+            const middayEnd = new Date(`${dateStr}T13:30:00+03:00`);
+
+            // Check afternoon slot (13:30-16:30 Bucharest time, 180 min)
+            const afternoonStart = new Date(`${dateStr}T13:30:00+03:00`);
+            const afternoonEnd = new Date(`${dateStr}T16:30:00+03:00`);
 
             // Log the calendar ID being used
             console.log(`Checking calendar: ${process.env.GOOGLE_CALENDAR_ID}`);

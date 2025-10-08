@@ -6,7 +6,7 @@ import CalendarBooking from '../components/CalendarBooking.astro';
 
 // Import services data
 import servicesData from '../data/services.json';
-const pricingServices = servicesData.services.slice(0, 3); // First 3 for pricing section
+const pricingServices = servicesData.services; // All services for pricing section
 
 // Import hero and about images
 import paulaLupu1 from '../assets/PaulaLupu1.webp';
@@ -139,8 +139,8 @@ const getIconSVG = (iconType) => {
                         </div>
                     </div>
                 </div>
-
-                <!-- Service 3 -->
+            
+                 <!-- Service 3 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow service-card flex flex-col">
                     <img src={laserServiceImage.src} alt="Îndepărtare Tatuaj Laser" class="w-full h-48 object-cover">
                     <div class="p-4 flex flex-col flex-grow">
@@ -153,6 +153,7 @@ const getIconSVG = (iconType) => {
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>

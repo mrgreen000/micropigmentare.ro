@@ -3,7 +3,7 @@
     {
       "id": "sprancene-pudrata",
       "name": "Micropigmentare Sprâncene",
-      "subtitle": "Tehnica pudrata",
+      "subtitle": "Tehnica pudrat",
       "duration": "2-3 ore",
       "durationMinutes": 180,
       "price": 1200,
@@ -25,33 +25,46 @@
     {
       "id": "buze",
       "name": "Micropigmentare Buze",
-      "subtitle": "Contur și umplere",
+      "subtitle": "Tehnica aquarelle",
       "duration": "1.5-2 ore",
       "durationMinutes": 180,
       "price": 1200,
       "tag": "PREMIUM",
-      "description": "Contur buze sau colorare completă pentru o culoare naturală și definită",
+      "description": "Prima ședință pentru contur perfect și culoare naturală",
       "icon": "lips"
+    },
+    {
+      "id": "retus-sprancene",
+      "name": "Retuș Sprâncene / Buze",
+      "subtitle": "Perfecționare",
+      "duration": "1.5-2 ore",
+      "durationMinutes": 180,
+      "price": 300,
+      "tag": "OPTIONAL",
+      "description": "Retuș la maxim 8 săptămâni de la prima procedură",
+      "icon": "lips"
+    },
+    {
+      "id": "intretinere",
+      "name": "Întreținere Procedură",
+      "subtitle": "Perfecționare",
+      "duration": "1-1.5 ore",
+      "durationMinutes": 180,
+      "price": 1000,
+      "tag": "ANUAL",
+      "description": "Retuș la maxim 1-3 ani de la prima procedură",
+      "icon": "refresh"
     },
     {
       "id": "laser",
       "name": "Îndepărtare Tatuaj Laser",
-      "subtitle": "Ședință unică",
+      "subtitle": "Tehnologie avansată",
       "duration": "30-60 min",
       "durationMinutes": 30,
       "price": 300,
+      "tag": "LASER",
       "description": "Îndepărtare sigură a tatuajului vechi cu tehnologie laser modernă",
       "icon": "laser"
-    },
-    {
-      "id": "intretinere",
-      "name": "Întreținere Micropigmentare",
-      "subtitle": "Retuș",
-      "duration": "1-1.5 ore",
-      "durationMinutes": 180,
-      "price": 400,
-      "description": "Retuș și întreținere pentru a menține aspectul perfect al micropigmentării",
-      "icon": "refresh"
     }
   ]
 }

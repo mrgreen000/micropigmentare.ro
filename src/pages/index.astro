@@ -26,7 +26,7 @@ const buze = Object.values(buzeImages);
 const laser = Object.values(laserImages);
 
 // Icon mapping helper
-const getIconSVG = (iconType) => {
+const getIconSVG = (iconType: string) => {
     const icons = {
         eye: '<path stroke="currentColor" stroke-width="2" d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"/><path stroke="currentColor" stroke-width="2" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>',
         badge: '<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m7.171 12.906-2.153 6.411 2.672-.89 1.568 2.34 1.825-5.183m5.73-2.678 2.154 6.411-2.673-.89-1.568 2.34-1.825-5.183M9.165 4.3c.58.068 1.153-.17 1.515-.628a1.681 1.681 0 0 1 2.64 0 1.68 1.68 0 0 0 1.515.628 1.681 1.681 0 0 1 1.866 1.866c-.068.58.17 1.154.628 1.516a1.681 1.681 0 0 1 0 2.639 1.682 1.682 0 0 0-.628 1.515 1.681 1.681 0 0 1-1.866 1.866 1.681 1.681 0 0 0-1.516.628 1.681 1.681 0 0 1-2.639 0 1.681 1.681 0 0 0-1.515-.628 1.681 1.681 0 0 1-1.867-1.866 1.681 1.681 0 0 0-.627-1.515 1.681 1.681 0 0 1 0-2.64c.458-.361.696-.935.627-1.515A1.681 1.681 0 0 1 9.165 4.3ZM14 9a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"/>',
@@ -170,8 +170,8 @@ const getIconSVG = (iconType) => {
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {/* Sprâncene images */}
-                {sprancene.map((img, index) => (
-                <div class="relative group gallery-item" key={`sprancene-${index}`}>
+                {sprancene.map((img: any, index) => (
+                <div class="relative group gallery-item">
                     <img src={img.src} alt="Micropigmentare sprâncene" class="w-full h-64 object-cover rounded-lg hover:opacity-90 transition-opacity cursor-pointer" />
                     <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
                         <span class="text-white font-semibold">Micropigmentare Sprâncene</span>
@@ -180,8 +180,8 @@ const getIconSVG = (iconType) => {
                 ))}
 
                 {/* Buze images */}
-                {buze.map((img, index) => (
-                <div class="relative group gallery-item" key={`buze-${index}`}>
+                {buze.map((img: any, index) => (
+                <div class="relative group gallery-item">
                     <img src={img.src} alt="Micropigmentare buze" class="w-full h-64 object-cover rounded-lg hover:opacity-90 transition-opacity cursor-pointer" />
                     <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
                         <span class="text-white font-semibold">Micropigmentare Buze</span>
@@ -190,8 +190,8 @@ const getIconSVG = (iconType) => {
                 ))}
 
                 {/* Laser images */}
-                {laser.map((img, index) => (
-                <div class="relative group gallery-item" key={`laser-${index}`}>
+                {laser.map((img: any, index) => (
+                <div class="relative group gallery-item">
                     <img src={img.src} alt="Îndepărtare tatuaj laser" class="w-full h-64 object-cover rounded-lg hover:opacity-90 transition-opacity cursor-pointer" />
                     <div class="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity rounded-lg flex items-center justify-center">
                         <span class="text-white font-semibold">Îndepărtare Tatuaj Laser</span>
@@ -794,16 +794,16 @@ const getIconSVG = (iconType) => {
 
         // Add click event to gallery items
         galleryItems.forEach((item, index) => {
-            item.style.cursor = 'pointer';
+            (item as HTMLElement).style.cursor = 'pointer';
             item.addEventListener('click', function(e) {
                 console.log('Gallery item clicked:', index);
                 e.preventDefault();
                 e.stopPropagation();
-                const img = this.querySelector('img');
+                const img = this.querySelector('img') as HTMLImageElement;
                 if (img) {
-                    lightbox.style.display = 'block';
-                    lightboxImg.src = img.src;
-                    lightboxImg.alt = img.alt;
+                    (lightbox as HTMLElement).style.display = 'block';
+                    (lightboxImg as HTMLImageElement).src = img.src;
+                    (lightboxImg as HTMLImageElement).alt = img.alt;
                 }
             });
         });

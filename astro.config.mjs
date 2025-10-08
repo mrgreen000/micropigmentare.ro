@@ -2,12 +2,9 @@ import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import vercel from '@astrojs/vercel/static';
 
-// Use base path only for GitHub Pages deployment, not for Vercel
-const base = process.env.VERCEL ? '/' : (process.env.NODE_ENV === 'production' ? '/micropigmentare.ro/' : '/');
-
 export default defineConfig({
   site: 'https://micropigmentaresprancene.ro',
-  base: base,
+  base: '/',
   output: 'static',
   adapter: vercel(),
   integrations: [tailwind()],

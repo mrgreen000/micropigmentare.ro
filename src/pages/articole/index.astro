@@ -34,7 +34,7 @@ const sortedArticles = articles.sort((a, b) => b.data.pubDate.valueOf() - a.data
                                 ))}
                             </div>
                             <h2 class="text-2xl font-bold text-gray-900 mb-3">
-                                <a href={`/articole/${article.slug}/`} class="hover:text-primary transition-colors">
+                                <a href={`/${article.slug}/`} class="hover:text-primary transition-colors">
                                     {article.data.title}
                                 </a>
                             </h2>
@@ -45,7 +45,7 @@ const sortedArticles = articles.sort((a, b) => b.data.pubDate.valueOf() - a.data
                                     {article.data.pubDate.toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}
                                 </time>
                             </div>
-                            <a href={`/articole/${article.slug}/`}
+                            <a href={`/${article.slug}/`}
                                class="inline-flex items-center text-primary hover:text-primary-hover font-medium">
                                 Citește mai mult <i class="fas fa-arrow-right ml-2"></i>
                             </a>

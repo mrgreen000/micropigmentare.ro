@@ -24,7 +24,10 @@
       "Bash(git push:*)",
       "Read(///**)",
       "Bash(git rm:*)",
-      "Bash(git cherry-pick:*)"
+      "Bash(git cherry-pick:*)",
+      "Bash(git checkout:*)",
+      "Bash(curl:*)",
+      "Bash(gh run list:*)"
     ],
     "deny": [],
     "ask": []

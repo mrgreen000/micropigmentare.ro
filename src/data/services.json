@@ -1,5 +1,5 @@
 {
-  "globalDiscount": 0,
+  "globalDiscount": 20,
   "services": [
     {
       "id": "sprancene-pudrata",
@@ -7,7 +7,7 @@
       "subtitle": "Tehnica pudrat",
       "duration": "2-3 ore",
       "durationMinutes": 180,
-      "price": 1440,
+      "price": 1500,
       "tag": "POPULAR",
       "description": "Prima ședință cu tehnica clasică pentru sprâncene perfect definite și naturale",
       "icon": "eye"
@@ -18,7 +18,7 @@
       "subtitle": "Tehnica fir cu fir",
       "duration": "2-3 ore",
       "durationMinutes": 180,
-      "price": 1560,
+      "price": 1625,
       "tag": "TRENDING",
       "description": "Prima ședință cu tehnica Powder Brows pentru un efect ombré natural",
       "icon": "badge"
@@ -27,9 +27,9 @@
       "id": "buze",
       "name": "Micropigmentare Buze",
       "subtitle": "Tehnica aquarelle",
-      "duration": "2.5-3 ore",
+      "duration": "3 ore",
       "durationMinutes": 180,
-      "price": 1560,
+      "price": 1625,
       "tag": "PREMIUM",
       "description": "Prima ședință pentru contur perfect și culoare naturală",
       "icon": "lips"
@@ -40,7 +40,7 @@
       "subtitle": "Perfecționare",
       "duration": "1.5-2 ore",
       "durationMinutes": 180,
-      "price": 360,
+      "price": 375,
       "tag": "OPTIONAL",
       "description": "Retuș la maxim 8 săptămâni de la prima procedură",
       "icon": "lips"
@@ -51,7 +51,7 @@
       "subtitle": "Perfecționare",
       "duration": "2-3 ore",
       "durationMinutes": 180,
-      "price": 1200,
+      "price": 1250,
       "tag": "ANUAL",
       "description": "Retuș la maxim 1-3 ani de la prima procedură",
       "icon": "refresh"
@@ -62,7 +62,7 @@
       "subtitle": "Tehnologie avansată",
       "duration": "30 min",
       "durationMinutes": 30,
-      "price": 360,
+      "price": 375,
       "tag": "LASER",
       "description": "Îndepărtare sigură a tatuajului vechi cu tehnologie laser modernă",
       "icon": "laser"

@@ -1,4 +1,5 @@
 {
+  "globalDiscount": 0,
   "services": [
     {
       "id": "sprancene-pudrata",
@@ -6,7 +7,7 @@
       "subtitle": "Tehnica pudrat",
       "duration": "2-3 ore",
       "durationMinutes": 180,
-      "price": 1200,
+      "price": 1440,
       "tag": "POPULAR",
       "description": "Prima ședință cu tehnica clasică pentru sprâncene perfect definite și naturale",
       "icon": "eye"
@@ -17,7 +18,7 @@
       "subtitle": "Tehnica fir cu fir",
       "duration": "2-3 ore",
       "durationMinutes": 180,
-      "price": 1300,
+      "price": 1560,
       "tag": "TRENDING",
       "description": "Prima ședință cu tehnica Powder Brows pentru un efect ombré natural",
       "icon": "badge"
@@ -26,9 +27,9 @@
       "id": "buze",
       "name": "Micropigmentare Buze",
       "subtitle": "Tehnica aquarelle",
-      "duration": "1.5-2 ore",
+      "duration": "2.5-3 ore",
       "durationMinutes": 180,
-      "price": 1200,
+      "price": 1560,
       "tag": "PREMIUM",
       "description": "Prima ședință pentru contur perfect și culoare naturală",
       "icon": "lips"
@@ -39,7 +40,7 @@
       "subtitle": "Perfecționare",
       "duration": "1.5-2 ore",
       "durationMinutes": 180,
-      "price": 300,
+      "price": 360,
       "tag": "OPTIONAL",
       "description": "Retuș la maxim 8 săptămâni de la prima procedură",
       "icon": "lips"
@@ -48,9 +49,9 @@
       "id": "intretinere",
       "name": "Întreținere Procedură",
       "subtitle": "Perfecționare",
-      "duration": "1-1.5 ore",
+      "duration": "2-3 ore",
       "durationMinutes": 180,
-      "price": 1000,
+      "price": 1200,
       "tag": "ANUAL",
       "description": "Retuș la maxim 1-3 ani de la prima procedură",
       "icon": "refresh"
@@ -59,9 +60,9 @@
       "id": "laser",
       "name": "Îndepărtare Tatuaj Laser",
       "subtitle": "Tehnologie avansată",
-      "duration": "30-60 min",
+      "duration": "30 min",
       "durationMinutes": 30,
-      "price": 300,
+      "price": 360,
       "tag": "LASER",
       "description": "Îndepărtare sigură a tatuajului vechi cu tehnologie laser modernă",
       "icon": "laser"

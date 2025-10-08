@@ -1,6 +1,11 @@
 ---
 import servicesData from '../data/services.json';
-const services = servicesData.services as any[];
+const globalDiscount = servicesData.globalDiscount || 0;
+const services = (servicesData.services as any[]).map(service => ({
+    ...service,
+    originalPrice: service.price,
+    price: globalDiscount > 0 ? Math.round(service.price * (1 - globalDiscount / 100)) : service.price
+}));
 ---
 
 <div id="calendar-booking-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
@@ -30,8 +35,11 @@ const services = servicesData.services as any[];
                                 </div>
                             </div>
                             <div class="text-right">
-                                {'priceOld' in service && service.priceOld && (
-                                    <div class="text-sm text-gray-400 line-through">{service.priceOld} RON</div>
+                                {globalDiscount > 0 && (
+                                    <div class="flex items-center gap-2 justify-end mb-1">
+                                        <span class="text-sm text-gray-400 line-through">{service.originalPrice} RON</span>
+                                        <span class="bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded">-{globalDiscount}%</span>
+                                    </div>
                                 )}
                                 <div class="text-lg font-semibold text-primary">{service.price} RON</div>
                             </div>

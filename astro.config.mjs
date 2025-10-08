@@ -1,11 +1,11 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
-import vercel from '@astrojs/vercel/static';
+import vercel from '@astrojs/vercel';
 
 export default defineConfig({
   site: 'https://micropigmentaresprancene.ro',
   base: '/',
-  output: 'static',
+  output: 'server',
   adapter: vercel(),
   integrations: [tailwind()],
   server: {

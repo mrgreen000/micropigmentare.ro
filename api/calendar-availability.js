@@ -114,6 +114,9 @@ async function checkGoogleCalendarAvailability(weekStart) {
             const afternoonEnd = new Date(date);
             afternoonEnd.setHours(16, 30, 0, 0);
 
+            // Log the calendar ID being used
+            console.log(`Checking calendar: ${process.env.GOOGLE_CALENDAR_ID}`);
+
             // Fetch events for all time slots in parallel for better performance
             const [morningEvents, middayEvents, afternoonEvents] = await Promise.all([
                 calendar.events.list({
@@ -122,6 +125,9 @@ async function checkGoogleCalendarAvailability(weekStart) {
                     timeMax: morningEnd.toISOString(),
                     singleEvents: true,
                     timeZone: 'Europe/Bucharest',
+                }).catch(err => {
+                    console.error('Morning events error:', err.message);
+                    return { data: { items: [] } };
                 }),
                 calendar.events.list({
                     calendarId: process.env.GOOGLE_CALENDAR_ID,
@@ -129,6 +135,9 @@ async function checkGoogleCalendarAvailability(weekStart) {
                     timeMax: middayEnd.toISOString(),
                     singleEvents: true,
                     timeZone: 'Europe/Bucharest',
+                }).catch(err => {
+                    console.error('Midday events error:', err.message);
+                    return { data: { items: [] } };
                 }),
                 calendar.events.list({
                     calendarId: process.env.GOOGLE_CALENDAR_ID,
@@ -136,6 +145,9 @@ async function checkGoogleCalendarAvailability(weekStart) {
                     timeMax: afternoonEnd.toISOString(),
                     singleEvents: true,
                     timeZone: 'Europe/Bucharest',
+                }).catch(err => {
+                    console.error('Afternoon events error:', err.message);
+                    return { data: { items: [] } };
                 })
             ]);
 

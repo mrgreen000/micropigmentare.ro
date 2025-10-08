@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Navigation from '../../components/Navigation.astro';
+import Footer from '../../components/Footer.astro';
+import { getCollection } from 'astro:content';
+
+const articles = await getCollection('articles');
+const sortedArticles = articles.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+---
+
+<BaseLayout title="Articole - Paula Lupu Micropigmentare" description="Articole și ghiduri despre micropigmentare, îngrijire și tehnici profesionale.">
+    <Navigation />
+
+    <main class="pt-24 pb-20">
+        <div class="max-w-screen-xl mx-auto px-4">
+            <!-- Header -->
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Articole</h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+                    Ghiduri complete despre serviciile de micropigmentare și îngrijire
+                </p>
+            </div>
+
+            <!-- Articles Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {sortedArticles.map((article) => (
+                    <article class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div class="p-6">
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                {article.data.tags.map((tag) => (
+                                    <span class="text-xs bg-primary/10 text-primary px-2 py-1 rounded">
+                                        {tag}
+                                    </span>
+                                ))}
+                            </div>
+                            <h2 class="text-2xl font-bold text-gray-900 mb-3">
+                                <a href={`/articole/${article.slug}/`} class="hover:text-primary transition-colors">
+                                    {article.data.title}
+                                </a>
+                            </h2>
+                            <p class="text-gray-600 mb-4">{article.data.description}</p>
+                            <div class="flex items-center justify-between text-sm text-gray-500 mb-4">
+                                <span>{article.data.author}</span>
+                                <time datetime={article.data.pubDate.toISOString()}>
+                                    {article.data.pubDate.toLocaleDateString('ro-RO', { year: 'numeric', month: 'long', day: 'numeric' })}
+                                </time>
+                            </div>
+                            <a href={`/articole/${article.slug}/`}
+                               class="inline-flex items-center text-primary hover:text-primary-hover font-medium">
+                                Citește mai mult <i class="fas fa-arrow-right ml-2"></i>
+                            </a>
+                        </div>
+                    </article>
+                ))}
+            </div>
+        </div>
+    </main>
+
+    <Footer />
+</BaseLayout>

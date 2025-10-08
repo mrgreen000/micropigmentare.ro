@@ -237,9 +237,13 @@ const { Content } = await article.render();
                 currentImageIndex = index;
 
                 const img = images[index];
-                lightboxImg.src = img.src;
-                lightboxImg.alt = img.alt;
-                counter.textContent = `${index + 1} / ${images.length}`;
+                if (img instanceof HTMLImageElement && lightboxImg instanceof HTMLImageElement) {
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                }
+                if (counter) {
+                    counter.textContent = `${index + 1} / ${images.length}`;
+                }
             }
 
             // Close lightbox

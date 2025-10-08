@@ -53,51 +53,47 @@ const services = (servicesData.services as any[]).map(service => ({
                 <h3 class="text-lg font-semibold text-gray-900 mb-4">Selectează data și ora:</h3>
 
                 <!-- Week Navigation -->
-                <div class="flex justify-between items-center mb-5">
-                    <button id="prev-week" class="px-4 py-2 text-primary hover:bg-primary hover:text-white rounded-lg transition-colors">
-                        <i class="fas fa-chevron-left mr-2"></i>Săptămâna anterioară
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-3 mb-5">
+                    <button id="prev-week" class="px-3 py-2 text-sm sm:text-base text-primary hover:bg-primary hover:text-white rounded-lg transition-colors whitespace-nowrap">
+                        <i class="fas fa-chevron-left mr-1 sm:mr-2"></i><span class="hidden sm:inline">Săptămâna anterioară</span><span class="sm:hidden">Anterior</span>
                     </button>
-                    <span id="current-week-display" class="text-gray-700 font-medium"></span>
-                    <button id="next-week" class="px-4 py-2 text-primary hover:bg-primary hover:text-white rounded-lg transition-colors">
-                        Săptămâna următoare<i class="fas fa-chevron-right ml-2"></i>
+                    <span id="current-week-display" class="text-gray-700 font-medium text-sm sm:text-base text-center"></span>
+                    <button id="next-week" class="px-3 py-2 text-sm sm:text-base text-primary hover:bg-primary hover:text-white rounded-lg transition-colors whitespace-nowrap">
+                        <span class="hidden sm:inline">Săptămâna următoare</span><span class="sm:hidden">Următor</span><i class="fas fa-chevron-right ml-1 sm:ml-2"></i>
                     </button>
                 </div>
 
                 <!-- Calendar Grid -->
-                <div class="overflow-x-auto">
-                    <div class="min-w-[600px]">
+                <div class="overflow-x-auto -mx-4 px-4 sm:mx-0 sm:px-0">
+                    <div>
                         <!-- Days Header -->
-                        <div class="grid grid-cols-6 gap-2 mb-3">
-                            <div class="text-center font-semibold text-gray-600 py-2">Interval</div>
+                        <div class="grid grid-cols-5 gap-1 sm:gap-2 mb-3">
                             <div class="text-center py-2">
-                                <div class="font-semibold text-gray-600">Luni</div>
-                                <div id="day-1-date" class="text-sm text-gray-500"></div>
+                                <div class="font-semibold text-gray-600 text-xs sm:text-sm">Luni</div>
+                                <div id="day-1-date" class="text-xs text-gray-500"></div>
                             </div>
                             <div class="text-center py-2">
-                                <div class="font-semibold text-gray-600">Marți</div>
-                                <div id="day-2-date" class="text-sm text-gray-500"></div>
+                                <div class="font-semibold text-gray-600 text-xs sm:text-sm">Marți</div>
+                                <div id="day-2-date" class="text-xs text-gray-500"></div>
                             </div>
                             <div class="text-center py-2">
-                                <div class="font-semibold text-gray-600">Miercuri</div>
-                                <div id="day-3-date" class="text-sm text-gray-500"></div>
+                                <div class="font-semibold text-gray-600 text-xs sm:text-sm">Miercuri</div>
+                                <div id="day-3-date" class="text-xs text-gray-500"></div>
                             </div>
                             <div class="text-center py-2">
-                                <div class="font-semibold text-gray-600">Joi</div>
-                                <div id="day-4-date" class="text-sm text-gray-500"></div>
+                                <div class="font-semibold text-gray-600 text-xs sm:text-sm">Joi</div>
+                                <div id="day-4-date" class="text-xs text-gray-500"></div>
                             </div>
                             <div class="text-center py-2">
-                                <div class="font-semibold text-gray-600">Vineri</div>
-                                <div id="day-5-date" class="text-sm text-gray-500"></div>
+                                <div class="font-semibold text-gray-600 text-xs sm:text-sm">Vineri</div>
+                                <div id="day-5-date" class="text-xs text-gray-500"></div>
                             </div>
                         </div>
 
                         <!-- Time Slots -->
-                        <div id="calendar-grid" class="space-y-3">
+                        <div id="calendar-grid" class="space-y-2 sm:space-y-3">
                             <!-- Morning Slot Row (180 min) -->
-                            <div class="grid grid-cols-6 gap-2 slot-row" data-slot-duration="180">
-                                <div class="flex items-center justify-center bg-gray-50 rounded-lg py-2 font-medium text-gray-700 text-sm">
-                                    10:00-13:00
-                                </div>
+                            <div class="grid grid-cols-5 gap-1 sm:gap-2 slot-row" data-slot-duration="180" data-slot-time="10:00" data-slot-time-full="10:00-13:00">
                                 <div class="calendar-slot" data-slot="morning" data-slot-duration="180" data-day="1"></div>
                                 <div class="calendar-slot" data-slot="morning" data-slot-duration="180" data-day="2"></div>
                                 <div class="calendar-slot" data-slot="morning" data-slot-duration="180" data-day="3"></div>
@@ -106,10 +102,7 @@ const services = (servicesData.services as any[]).map(service => ({
                             </div>
 
                             <!-- Midday Slot Row (30 min) - Laser Only -->
-                            <div class="grid grid-cols-6 gap-2 slot-row" data-slot-duration="30">
-                                <div class="flex items-center justify-center bg-gray-50 rounded-lg py-2 font-medium text-gray-700 text-sm">
-                                    13:00-13:30
-                                </div>
+                            <div class="grid grid-cols-5 gap-1 sm:gap-2 slot-row" data-slot-duration="30" data-slot-time="13:00" data-slot-time-full="13:00-13:30">
                                 <div class="calendar-slot" data-slot="midday" data-slot-duration="30" data-day="1"></div>
                                 <div class="calendar-slot" data-slot="midday" data-slot-duration="30" data-day="2"></div>
                                 <div class="calendar-slot" data-slot="midday" data-slot-duration="30" data-day="3"></div>
@@ -118,10 +111,7 @@ const services = (servicesData.services as any[]).map(service => ({
                             </div>
 
                             <!-- Afternoon Slot Row (180 min) -->
-                            <div class="grid grid-cols-6 gap-2 slot-row" data-slot-duration="180">
-                                <div class="flex items-center justify-center bg-gray-50 rounded-lg py-2 font-medium text-gray-700 text-sm">
-                                    13:30-16:30
-                                </div>
+                            <div class="grid grid-cols-5 gap-1 sm:gap-2 slot-row" data-slot-duration="180" data-slot-time="13:30" data-slot-time-full="13:30-16:30">
                                 <div class="calendar-slot" data-slot="afternoon" data-slot-duration="180" data-day="1"></div>
                                 <div class="calendar-slot" data-slot="afternoon" data-slot-duration="180" data-day="2"></div>
                                 <div class="calendar-slot" data-slot="afternoon" data-slot-duration="180" data-day="3"></div>
@@ -179,8 +169,10 @@ const services = (servicesData.services as any[]).map(service => ({
 
         // Week navigation
         document.getElementById('prev-week').addEventListener('click', () => {
-            currentWeekOffset--;
-            updateCalendar();
+            if (!document.getElementById('prev-week').disabled) {
+                currentWeekOffset--;
+                updateCalendar();
+            }
         });
 
         document.getElementById('next-week').addEventListener('click', () => {
@@ -208,8 +200,25 @@ const services = (servicesData.services as any[]).map(service => ({
 
     function updateCalendar() {
         const today = new Date();
-        const currentWeekStart = new Date(today);
-        currentWeekStart.setDate(today.getDate() + (currentWeekOffset * 7) - today.getDay() + 1); // Start on Monday
+        today.setHours(0, 0, 0, 0); // Reset time for accurate comparison
+
+        // Get the current week's Monday
+        const todayDayOfWeek = today.getDay();
+        const currentWeekMonday = new Date(today);
+
+        // Adjust for weekend - if today is Saturday or Sunday, use next Monday
+        if (todayDayOfWeek === 0) { // Sunday
+            currentWeekMonday.setDate(today.getDate() + 1);
+        } else if (todayDayOfWeek === 6) { // Saturday
+            currentWeekMonday.setDate(today.getDate() + 2);
+        } else {
+            // Start from current week's Monday
+            currentWeekMonday.setDate(today.getDate() - todayDayOfWeek + 1);
+        }
+
+        // Calculate the displayed week based on offset
+        const currentWeekStart = new Date(currentWeekMonday);
+        currentWeekStart.setDate(currentWeekMonday.getDate() + (currentWeekOffset * 7));
 
         // Update week display
         const weekEnd = new Date(currentWeekStart);
@@ -217,6 +226,18 @@ const services = (servicesData.services as any[]).map(service => ({
 
         const weekDisplay = document.getElementById('current-week-display');
         weekDisplay.textContent = formatWeekRange(currentWeekStart, weekEnd);
+
+        // Disable prev button if going back would show a week before current week
+        const prevButton = document.getElementById('prev-week');
+        const wouldBePastWeek = currentWeekOffset <= 0;
+
+        if (wouldBePastWeek) {
+            prevButton.disabled = true;
+            prevButton.classList.add('opacity-50', 'cursor-not-allowed');
+        } else {
+            prevButton.disabled = false;
+            prevButton.classList.remove('opacity-50', 'cursor-not-allowed');
+        }
 
         // Update day dates
         for (let i = 0; i < 5; i++) {
@@ -297,28 +318,41 @@ const services = (servicesData.services as any[]).map(service => ({
 
     function renderCalendar(availability, weekStart) {
         const slots = document.querySelectorAll('.calendar-slot');
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
 
         slots.forEach(slot => {
             const day = parseInt(slot.dataset.day);
             const slotType = slot.dataset.slot;
+            const slotRow = slot.closest('.slot-row');
+            const timeSlot = slotRow ? slotRow.dataset.slotTime : '';
 
             const date = new Date(weekStart);
             date.setDate(weekStart.getDate() + (day - 1));
             const dateKey = date.toISOString().split('T')[0];
 
+            const isPast = date < today;
             const isAvailable = availability[dateKey]?.[slotType] || false;
 
-            // Clear previous classes
-            slot.className = 'calendar-slot flex items-center justify-center rounded-lg py-2 cursor-pointer transition-all';
+            // Remove all previous classes and content first
+            slot.className = '';
+            slot.innerHTML = '';
+            slot.onclick = null;
 
-            if (isAvailable) {
-                slot.classList.add('bg-green-500', 'hover:bg-green-600', 'text-white');
-                slot.innerHTML = '<i class="fas fa-check"></i>';
+            // Add base classes
+            slot.className = 'calendar-slot flex flex-col items-center justify-center rounded-lg py-3';
+
+            // If date is in the past, mark as unavailable
+            if (isPast) {
+                slot.classList.add('bg-gray-300', 'cursor-not-allowed', 'text-gray-500', 'opacity-50');
+                slot.innerHTML = `<div class="text-[10px] sm:text-xs mb-1">${timeSlot}</div><i class="fas fa-ban text-sm sm:text-base"></i>`;
+            } else if (isAvailable) {
+                slot.classList.add('bg-green-500', 'hover:bg-green-600', 'text-white', 'cursor-pointer', 'transition-colors');
+                slot.innerHTML = `<div class="text-[10px] sm:text-xs mb-1">${timeSlot}</div><i class="fas fa-check text-sm sm:text-base"></i>`;
                 slot.onclick = () => handleSlotClick(date, slotType);
             } else {
                 slot.classList.add('bg-red-500', 'cursor-not-allowed', 'text-white', 'opacity-50');
-                slot.innerHTML = '<i class="fas fa-times"></i>';
-                slot.onclick = null;
+                slot.innerHTML = `<div class="text-[10px] sm:text-xs mb-1">${timeSlot}</div><i class="fas fa-times text-sm sm:text-base"></i>`;
             }
 
             // Store date info
@@ -333,9 +367,9 @@ const services = (servicesData.services as any[]).map(service => ({
         }
 
         const timeSlots = {
-            morning: '10:00-13:00',
-            midday: '13:00-13:30',
-            afternoon: '13:30-16:30'
+            morning: '10:00',
+            midday: '13:00',
+            afternoon: '13:30'
         };
 
         const timeSlot = timeSlots[slotType] || timeSlots.morning;

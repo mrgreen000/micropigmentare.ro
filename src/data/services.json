@@ -1,0 +1,57 @@
+{
+  "services": [
+    {
+      "id": "sprancene-pudrata",
+      "name": "Micropigmentare Sprâncene",
+      "subtitle": "Tehnica pudrata",
+      "duration": "2-3 ore",
+      "durationMinutes": 180,
+      "price": 1200,
+      "tag": "POPULAR",
+      "description": "Prima ședință cu tehnica clasică pentru sprâncene perfect definite și naturale",
+      "icon": "eye"
+    },
+    {
+      "id": "sprancene-fir",
+      "name": "Micropigmentare Sprâncene",
+      "subtitle": "Tehnica fir cu fir",
+      "duration": "2-3 ore",
+      "durationMinutes": 180,
+      "price": 1300,
+      "tag": "TRENDING",
+      "description": "Prima ședință cu tehnica Powder Brows pentru un efect ombré natural",
+      "icon": "badge"
+    },
+    {
+      "id": "buze",
+      "name": "Micropigmentare Buze",
+      "subtitle": "Contur și umplere",
+      "duration": "1.5-2 ore",
+      "durationMinutes": 180,
+      "price": 1200,
+      "tag": "PREMIUM",
+      "description": "Contur buze sau colorare completă pentru o culoare naturală și definită",
+      "icon": "lips"
+    },
+    {
+      "id": "laser",
+      "name": "Îndepărtare Tatuaj Laser",
+      "subtitle": "Ședință unică",
+      "duration": "30-60 min",
+      "durationMinutes": 30,
+      "price": 300,
+      "description": "Îndepărtare sigură a tatuajului vechi cu tehnologie laser modernă",
+      "icon": "laser"
+    },
+    {
+      "id": "intretinere",
+      "name": "Întreținere Micropigmentare",
+      "subtitle": "Retuș",
+      "duration": "1-1.5 ore",
+      "durationMinutes": 180,
+      "price": 400,
+      "description": "Retuș și întreținere pentru a menține aspectul perfect al micropigmentării",
+      "icon": "refresh"
+    }
+  ]
+}

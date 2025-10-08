@@ -15,7 +15,14 @@
       "Bash(npm uninstall:*)",
       "WebFetch(domain:raw.githubusercontent.com)",
       "Bash(npx playwright:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(cp:*)",
+      "WebFetch(domain:mrgreen000.github.io)",
+      "WebSearch",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Read(///**)"
     ],
     "deny": [],
     "ask": []

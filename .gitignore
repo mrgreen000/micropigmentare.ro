@@ -55,3 +55,6 @@ TODO.md
 package-lock.json  # Include or exclude based on preference
 yarn.lock         # Include or exclude based on preference
 pnpm-lock.yaml   # Include or exclude based on preference
+
+#secrets
+micropigmentare-1525588748934-ea922a8db426.json

@@ -1,135 +1,45 @@
 ---
 title: "Micropigmentare Buze - Ghid Complet"
-description: "Descoperă tot ce trebuie să știi despre micropigmentarea buzelor: tehnici, beneficii, îngrijire și rezultate."
+description: "Descopera tot ce trebuie sa stii despre micropigmentarea buzelor: tehnici, beneficii, ingrijire si rezultate."
 pubDate: 2025-01-08
 author: "Paula Lupu"
-image: "/images/buze-hero.jpg"
-tags: ["micropigmentare", "buze", "beauty", "pmu", "lip blush"]
+image: "../../assets/micropigmentarebuze/micropigmentareBuze1_1.jpeg"
+tags: ["micropigmentare", "buze", "beauty", "micropigmentare buze", "micropigmentare buze Ploiesti"]
 ---
 
-# Micropigmentare Buze - Ghid Complet
+## Micropigmentare Buze - Culoare si Contur Natural
 
-## Ce este micropigmentarea buzelor?
+Micropigmentarea buzelor este o procedura estetica avansata, menita sa redea frumusetea naturala a buzelor prin corectarea formei, intensificarea culorii si definirea conturului intr-un mod discret si elegant.
 
-Micropigmentarea buzelor, cunoscută și ca Lip Blush sau Aquarelle Lips, este o tehnică semi-permanentă care îmbunătățește culoarea și forma naturală a buzelor. Rezultatul este un aspect fresh și natural, ca și cum ai purta întotdeauna un gloss delicat.
+**Scopul tehnicii** este de a obtine buze armonioase, uniforme si luminoase, fara efectul de machiaj accentuat.
 
-## Tehnica Aquarelle
+![Micropigmentare Buze](../../assets/micropigmentarebuze/micropigmentareBuze1_1.jpeg)
+![Micropigmentare Buze](../../assets/micropigmentarebuze/micropigmentareBuze2_1.jpeg)
+![Micropigmentare Buze](../../assets/micropigmentarebuze/micropigmentareBuze3.jpeg)
+## Procesul de Micropigmentare
 
-Tehnica Aquarelle creează un efect de culoare translucidă și naturală:
-- Aspect de buze hidratate
-- Culoare uniformă și naturală
-- Acoperă decolorările
-- Contur definit dar soft
-- Durată: 3 ore
+Procedura consta in introducerea atent dozata a pigmentului in stratul superficial al pielii, folosind miscari fine si controlate.
 
-## Beneficii micropigmentare buze
+In functie de dorintele si trasaturile fiecarei cliente, se poate obtine un efect foarte natural sau usor mai intens, insa intotdeauna echilibrat si adaptat fizionomiei.
 
-✅ Culoare naturală permanentă
-✅ Buze mai pline și definite
-✅ Elimină necesitatea rujului
-✅ Acoperă cicatrici sau decolorări
-✅ Rezultat natural 24/7
-✅ Durează 2-3 ani
 
-## Pentru cine este ideală?
 
-Micropigmentarea buzelor este perfectă dacă:
-- Îți dorești buze mai colorate natural
-- Vrei să corectezi asimetria
-- Buzele tale și-au pierdut culoarea
-- Vrei să pari mereu fresh
-- Nu vrei să te mai machiezi zilnic
+## Procesul de Vindecare
 
-## Procesul micropigmentării
+Imediat dupa procedura, culoarea buzelor apare mai intensa si mai saturata, datorita faptului ca pigmentul este proaspat si pielea reactioneaza printr-o usoara inflamatie.
 
-### 1. Consultația
-Discutăm despre:
-- Culoarea dorită
-- Forma buzelor
-- Așteptări și rezultate
-- Contraindicații
+In timpul procesului de vindecare, care dureaza aproximativ **7-10 zile**, tonul se estompeaza treptat cu **40-50%**, dezvaluind nuanta finala - o culoare naturala, fina si uniforma, perfect integrata cu tonul pielii.
 
-### 2. Design și aprobare
-- Desenăm conturul dorit
-- Alegem nuanța perfectă
-- Aprobarea ta finală
 
-### 3. Procedura
-- Aplicăm anestezie locală
-- Micropigmentare cu tehnica Aquarelle
-- Durată: ~3 ore
-- Disconfort minim
 
-### 4. Retuș
-- După 6-8 săptămâni
-- Perfecționare și intensificare
-- Durata: 1.5-2 ore
+## Rezultatul Final
 
-## Îngrijire post-procedură
+Rezultatul final ofera **buze catifelate**, bine conturate si vizibil mai luminoase, pastrand un aspect natural si sanatos.
 
-### Primele 7-10 zile:
-- Evită apa directă pe buze
-- Aplică balsam de vindecare
-- Nu mânca alimente picante/acide
-- Evită kissing-ul 😊
-- Nu folosi rujuri
+### Beneficii
 
-### Următoarele 2 săptămâni:
-- Protejează de soare (SPF)
-- Evită piscina și sauna
-- Hidratează buzele
-- Nu zgâria crustele
-
-## Ce să te aștepți
-
-### Imediat după:
-- Culoare intensă
-- Ușor umflate (normal)
-- Posibil disconfort minim
-
-### După 1 săptămână:
-- Cruste fine (nu zgâria!)
-- Culoare mai deschisă
-- Vindecare în progres
-
-### După 4 săptămâni:
-- Culoarea reală vizibilă
-- Aspect natural
-- Buzele vindecate complet
-
-### După retuș:
-- Culoare perfectă
-- Rezultat final
-- Durabilitate maximă
-
-## Cât durează rezultatul?
-
-Micropigmentarea buzelor durează **2-3 ani**, influențată de:
-- Tipul pielii
-- Expunerea la soare
-- Fumatul (accelerează estomparea)
-- Stilul de viață
-- Îngrijirea ulterioară
-
-## Contraindicații
-
-⚠️ **Nu este recomandată dacă:**
-- Ești însărcinată sau alăptezi
-- Ai herpes activ
-- Ai diabet necontrolat
-- Iei medicamente anticoagulante
-- Ai infecții active
-
-## De ce să alegi micropigmentarea buzelor?
-
-Dacă îți dorești buze perfect colorate fără efort zilnic, micropigmentarea este soluția ideală. Cu experiența mea din 2017 și tehnica Aquarelle, îți garantez rezultate naturale și frumoase.
-
-## Prețuri
-
-- Prima ședință: **1300 RON** (3 ore)
-- Retuș (6-8 săptămâni): **300 RON**
-- Întreținere (după 2-3 ani): **1000 RON**
-
-## Programează-te acum!
-
-Contactează-mă pentru o consultație gratuită și descoperă cum micropigmentarea poate transforma buzele tale!
+- Evidentiaza trasaturile
+- Corecteaza usor eventualele asimetrii
+- Reda prospetimea buzelor
+- Creeaza un efect de volum subtil
+- Fara modificarea formei naturale

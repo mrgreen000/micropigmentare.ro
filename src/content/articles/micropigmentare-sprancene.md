@@ -1,67 +1,39 @@
 ---
-title: "Micropigmentare Sprâncene - Ghid Complet"
-description: "Tot ce trebuie să știi despre micropigmentarea sprâncenelor: tehnici, durată, îngrijire și beneficii."
+title: "Micropigmentare Sprancene - Tehnica Pudrata"
+description: "Tot ce trebuie sa stii despre micropigmentarea sprancenelor folosind tehnica pudrata: tehnici, durata, ingrijire si beneficii."
 pubDate: 2025-01-08
 author: "Paula Lupu"
-image: "/images/sprancene-hero.jpg"
-tags: ["micropigmentare", "sprâncene", "beauty", "pmu"]
+image: "../../assets/micropigmentareSprancene/micropigmentareSprancene1_1.jpeg"
+tags: ["micropigmentare", "micropigmentare sprancene", "micropigmentare sprancene ploiesti", "micropigmentare ploiesti"]
 ---
 
-# Micropigmentare Sprâncene - Ghid Complet
+## Micropigmentare Sprancene - Tehnica Pudrata (Powder Brows)
 
-## Ce este micropigmentarea sprâncenelor?
+Tehnica pudrata este una dintre cele mai moderne si delicate metode de redefinire a sprancenelor. Aceasta se realizeaza prin implantarea fina a pigmentului in stratul superficial al pielii, cu ajutorul unui aparat de micropigmentare si a unui ac subtire, special conceput pentru lucrari de precizie.
 
-Micropigmentarea sprâncenelor este o tehnică semi-permanentă de embellishment care creează sprâncene perfect definite și naturale. Această procedură modernă oferă o soluție pe termen lung pentru cei care doresc sprâncene frumoase fără efortul zilnic de machiaj.
+![Micropigmentare Sprancene - Tehnica Pudrata](../../assets/micropigmentareSprancene/micropigmentareSprancene1_1.jpeg)
+![Micropigmentare Sprancene - Tehnica Pudrata](../../assets/micropigmentareSprancene/micropigmentareSprancene1_2.jpeg)
+![Micropigmentare Sprancene - Tehnica Pudrata](../../assets/micropigmentareSprancene/micropigmentareSprancene2_1.jpeg)
 
-## Tehnici disponibile
+## Cum Functioneaza Tehnica Powder Brows
 
-### Tehnica Pudrat (Powder Brows)
-- Aspect natural și ușor pudrat
-- Durată: 2-3 ore
-- Rezultat: efect de machiaj soft
-- Ideal pentru toate tipurile de piele
+Spre deosebire de tehnicile clasice, Powder Brows nu implica trasarea de fire, ci creeaza un efect de umbrire difuza, asemanator cu aplicarea unui fard usor sau a unui machiaj profesionist.
 
-### Tehnica Fir cu Fir (Microblading)
-- Creează fire individuale ultra-realiste
-- Aspect hiper-natural
-- Perfect pentru cei care doresc un look definit
-- Durată: 2-3 ore
+Intensitatea si nuanta se adapteaza fiecarui tip de piele, stil de spranceana si preferintelor clientei, de la un aspect foarte natural si aerisit pana la unul mai definit si structurat.
 
-## Beneficii
 
-✅ Sprâncene perfecte 24/7
-✅ Economisești timp în fiecare dimineață
-✅ Rezistent la apă și transpirație
-✅ Durează 1-3 ani
-✅ Aspect natural și personalizat
+## Procesul de Micropigmentare
 
-## Procesul de micropigmentare
+In prima etapa, se stabileste forma ideala a sprancenelor printr-o masurare atenta si o schita personalizata in functie de trasaturile fetei.
 
-1. **Consultație**: Discutăm despre forma și culoarea dorită
-2. **Design**: Desenăm forma perfectă pentru trăsăturile tale
-3. **Micropigmentare**: Aplicăm pigmentul cu tehnică profesională
-4. **Retuș**: După 6-8 săptămâni pentru perfecționare
+Urmeaza alegerea pigmentului potrivit, tinand cont de tonul pielii si culoarea parului. Procedura se desfasoara cu anestezie locala topica, pentru un confort sporit.
 
-## Îngrijire post-procedură
 
-- Evită apa pe zona tratată 7-10 zile
-- Nu expune la soare direct
-- Aplică cremă de vindecare
-- Nu zgâria sau freci zona
-- Evită sauna și piscina 2 săptămâni
+## Rezultatul Final
 
-## Cât durează rezultatul?
+**Sprancene perfect conturate**, simetrice si armonioase, cu un efect natural, care pun in valoare expresivitatea chipului.
 
-Micropigmentarea sprâncenelor durează **1-3 ani**, în funcție de:
-- Tipul pielii
-- Stilul de viață
-- Îngrijirea ulterioară
-- Expunerea la soare
-
-## De ce să alegi micropigmentarea?
-
-Dacă îți dorești sprâncene perfecte fără efort zilnic, micropigmentarea este soluția ideală. Cu experiența mea din 2017, îți garantez rezultate naturale și profesionale.
-
-## Programează-te acum!
-
-Contactează-mă pentru o consultație gratuită și descoperă cum micropigmentarea poate transforma aspectul tău.
+Rezistenta in timp este, in general, de **1,5-2 ani**, in functie de:
+- Tipul de piele
+- Stilul de viata
+- Ingrijirea post-procedura

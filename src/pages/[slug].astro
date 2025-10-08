@@ -236,9 +236,9 @@ const { Content } = await article.render();
                 if (index >= images.length) index = 0;
                 currentImageIndex = index;
 
-                const img = images[index] as HTMLImageElement;
-                (lightboxImg as HTMLImageElement).src = img.src;
-                (lightboxImg as HTMLImageElement).alt = img.alt;
+                const img = images[index];
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
                 counter.textContent = `${index + 1} / ${images.length}`;
             }
 

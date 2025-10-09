@@ -87,7 +87,7 @@ const { Content } = await article.render();
     <Footer />
 </BaseLayout>
 
-<style>
+<style is:global>
     /* Lightbox styles */
     .article-lightbox {
         display: none;
@@ -182,7 +182,7 @@ const { Content } = await article.render();
     }
 </style>
 
-<script>
+<script is:inline>
     // Initialize calendar modal for CTA button
     document.addEventListener('DOMContentLoaded', function() {
         const openButtons = document.querySelectorAll('.open-calendar-booking');
@@ -222,7 +222,9 @@ const { Content } = await article.render();
 
             // Open lightbox
             images.forEach((img, index) => {
-                img.addEventListener('click', function() {
+                img.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
                     currentImageIndex = index;
                     showImage(currentImageIndex);
                     lightbox.classList.add('active');

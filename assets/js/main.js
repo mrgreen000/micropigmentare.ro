@@ -208,6 +208,9 @@ function animateOnScroll() {
 let carouselInitialized = false;
 let carouselAutoPlay;
 
+let carouselRetryCount = 0;
+const MAX_CAROUSEL_RETRIES = 3;
+
 function initializeTestimonialsCarousel() {
     if (carouselInitialized) {
         console.log('Carousel already initialized, skipping...');
@@ -223,11 +226,16 @@ function initializeTestimonialsCarousel() {
     console.log('Slides found:', slides.length);
 
     if (!track || slides.length === 0) {
-        console.log('Missing required elements for carousel, retrying in 1 second...');
-        setTimeout(() => {
-            carouselInitialized = false; // Reset flag to allow retry
-            initializeTestimonialsCarousel();
-        }, 1000);
+        if (carouselRetryCount < MAX_CAROUSEL_RETRIES) {
+            carouselRetryCount++;
+            console.log(`Missing required elements for carousel, retrying in 1 second... (${carouselRetryCount}/${MAX_CAROUSEL_RETRIES})`);
+            setTimeout(() => {
+                carouselInitialized = false; // Reset flag to allow retry
+                initializeTestimonialsCarousel();
+            }, 1000);
+        } else {
+            console.log('Carousel elements not found after max retries. Skipping carousel initialization (likely not on homepage).');
+        }
         return;
     }
 

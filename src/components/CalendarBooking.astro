@@ -260,7 +260,6 @@ const services = (servicesData.services as any[]).map(service => ({
         try {
             // Send date at midnight UTC to avoid timezone confusion
             const dateStr = weekStart.toISOString().split('T')[0];
-            console.log('Fetching availability for week starting:', dateStr);
             const response = await fetch(`/api/calendar-availability?date=${dateStr}T00:00:00.000Z`);
             const data = await response.json();
 

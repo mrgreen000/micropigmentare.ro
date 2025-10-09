@@ -202,18 +202,19 @@ const services = (servicesData.services as any[]).map(service => ({
         const today = new Date();
         today.setHours(0, 0, 0, 0); // Reset time for accurate comparison
 
-        // Get the current week's Monday
+        // Get the current week's Monday (or next Monday if weekend)
         const todayDayOfWeek = today.getDay();
-        const currentWeekMonday = new Date(today);
+        let currentWeekMonday = new Date(today);
 
-        // Adjust for weekend - if today is Saturday or Sunday, use next Monday
+        // Adjust to get Monday
         if (todayDayOfWeek === 0) { // Sunday
-            currentWeekMonday.setDate(today.getDate() + 1);
+            currentWeekMonday.setDate(today.getDate() + 1); // Next Monday
         } else if (todayDayOfWeek === 6) { // Saturday
-            currentWeekMonday.setDate(today.getDate() + 2);
+            currentWeekMonday.setDate(today.getDate() + 2); // Next Monday
         } else {
-            // Start from current week's Monday
-            currentWeekMonday.setDate(today.getDate() - todayDayOfWeek + 1);
+            // Monday = 1, so: Monday - 1 = 0, Tuesday - 1 = 1, etc.
+            // To get to Monday: subtract (dayOfWeek - 1)
+            currentWeekMonday.setDate(today.getDate() - (todayDayOfWeek - 1));
         }
 
         // Calculate the displayed week based on offset

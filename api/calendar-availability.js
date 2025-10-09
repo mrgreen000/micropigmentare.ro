@@ -114,11 +114,19 @@ async function checkGoogleCalendarAvailability(weekStart) {
         const calendar = google.calendar({ version: 'v3', auth });
         const availability = {};
 
+        console.log('=== DEBUG: Week Start Processing ===');
+        console.log('weekStart received:', weekStart);
+        console.log('weekStart ISO:', weekStart.toISOString());
+        console.log('weekStart UTC date:', weekStart.getUTCDate());
+        console.log('weekStart local date:', weekStart.getDate());
+
         for (let i = 0; i < 5; i++) {
             // Work in UTC to avoid timezone issues across different Vercel regions
             const date = new Date(weekStart);
             date.setUTCDate(date.getUTCDate() + i);
             const dateKey = date.toISOString().split('T')[0];
+
+            console.log(`Day ${i}: date object:`, date.toISOString(), 'dateKey:', dateKey);
 
             // Create dates in Romanian timezone (Europe/Bucharest)
             const dateStr = dateKey; // YYYY-MM-DD

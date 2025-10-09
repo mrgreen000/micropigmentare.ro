@@ -199,31 +199,33 @@ const services = (servicesData.services as any[]).map(service => ({
     }
 
     function updateCalendar() {
+        // Use UTC to avoid timezone issues
         const today = new Date();
-        today.setHours(0, 0, 0, 0); // Reset time for accurate comparison
+        const todayUTC = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
+        const todayDate = new Date(todayUTC);
 
         // Get the current week's Monday (or next Monday if weekend)
-        const todayDayOfWeek = today.getDay();
-        let currentWeekMonday = new Date(today);
+        const todayDayOfWeek = todayDate.getUTCDay();
+        let currentWeekMonday = new Date(todayDate);
 
         // Adjust to get Monday
         if (todayDayOfWeek === 0) { // Sunday
-            currentWeekMonday.setDate(today.getDate() + 1); // Next Monday
+            currentWeekMonday.setUTCDate(todayDate.getUTCDate() + 1); // Next Monday
         } else if (todayDayOfWeek === 6) { // Saturday
-            currentWeekMonday.setDate(today.getDate() + 2); // Next Monday
+            currentWeekMonday.setUTCDate(todayDate.getUTCDate() + 2); // Next Monday
         } else {
             // Monday = 1, so: Monday - 1 = 0, Tuesday - 1 = 1, etc.
             // To get to Monday: subtract (dayOfWeek - 1)
-            currentWeekMonday.setDate(today.getDate() - (todayDayOfWeek - 1));
+            currentWeekMonday.setUTCDate(todayDate.getUTCDate() - (todayDayOfWeek - 1));
         }
 
         // Calculate the displayed week based on offset
         const currentWeekStart = new Date(currentWeekMonday);
-        currentWeekStart.setDate(currentWeekMonday.getDate() + (currentWeekOffset * 7));
+        currentWeekStart.setUTCDate(currentWeekMonday.getUTCDate() + (currentWeekOffset * 7));
 
         // Update week display
         const weekEnd = new Date(currentWeekStart);
-        weekEnd.setDate(currentWeekStart.getDate() + 4); // Friday
+        weekEnd.setUTCDate(currentWeekStart.getUTCDate() + 4); // Friday
 
         const weekDisplay = document.getElementById('current-week-display');
         weekDisplay.textContent = formatWeekRange(currentWeekStart, weekEnd);
@@ -243,10 +245,10 @@ const services = (servicesData.services as any[]).map(service => ({
         // Update day dates
         for (let i = 0; i < 5; i++) {
             const date = new Date(currentWeekStart);
-            date.setDate(currentWeekStart.getDate() + i);
+            date.setUTCDate(currentWeekStart.getUTCDate() + i);
             const dayDateElement = document.getElementById(`day-${i + 1}-date`);
             if (dayDateElement) {
-                dayDateElement.textContent = date.getDate();
+                dayDateElement.textContent = date.getUTCDate();
             }
         }
 
@@ -256,7 +258,10 @@ const services = (servicesData.services as any[]).map(service => ({
 
     async function fetchAvailability(weekStart) {
         try {
-            const response = await fetch(`/api/calendar-availability?date=${weekStart.toISOString()}`);
+            // Send date at midnight UTC to avoid timezone confusion
+            const dateStr = weekStart.toISOString().split('T')[0];
+            console.log('Fetching availability for week starting:', dateStr);
+            const response = await fetch(`/api/calendar-availability?date=${dateStr}T00:00:00.000Z`);
             const data = await response.json();
 
             if (data.success) {
@@ -320,7 +325,8 @@ const services = (servicesData.services as any[]).map(service => ({
     function renderCalendar(availability, weekStart) {
         const slots = document.querySelectorAll('.calendar-slot');
         const today = new Date();
-        today.setHours(0, 0, 0, 0);
+        const todayUTC = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
+        const todayDate = new Date(todayUTC);
 
         slots.forEach(slot => {
             const day = parseInt(slot.dataset.day);
@@ -329,10 +335,10 @@ const services = (servicesData.services as any[]).map(service => ({
             const timeSlot = slotRow ? slotRow.dataset.slotTime : '';
 
             const date = new Date(weekStart);
-            date.setDate(weekStart.getDate() + (day - 1));
+            date.setUTCDate(weekStart.getUTCDate() + (day - 1));
             const dateKey = date.toISOString().split('T')[0];
 
-            const isPast = date < today;
+            const isPast = date < todayDate;
             const isAvailable = availability[dateKey]?.[slotType] || false;
 
             // Remove all previous classes and content first
@@ -389,11 +395,11 @@ const services = (servicesData.services as any[]).map(service => ({
     }
 
     function formatWeekRange(startDate, endDate) {
-        const startDay = startDate.getDate();
-        const endDay = endDate.getDate();
-        const startMonth = startDate.toLocaleDateString('ro-RO', { month: 'long' });
-        const endMonth = endDate.toLocaleDateString('ro-RO', { month: 'long' });
-        const year = endDate.getFullYear();
+        const startDay = startDate.getUTCDate();
+        const endDay = endDate.getUTCDate();
+        const startMonth = startDate.toLocaleDateString('ro-RO', { month: 'long', timeZone: 'UTC' });
+        const endMonth = endDate.toLocaleDateString('ro-RO', { month: 'long', timeZone: 'UTC' });
+        const year = endDate.getUTCFullYear();
 
         // If same month, show: "7 - 11 octombrie 2025"
         if (startMonth === endMonth) {

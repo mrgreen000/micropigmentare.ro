@@ -150,10 +150,34 @@ async function checkGoogleCalendarAvailability(weekStart) {
                 })
             ]);
 
-            console.log(`Date: ${dateKey}`);
-            console.log(`  Morning (${morningStart.toISOString()} - ${morningEnd.toISOString()}): ${morningEvents.data.items.length} events`);
-            console.log(`  Midday (${middayStart.toISOString()} - ${middayEnd.toISOString()}): ${middayEvents.data.items.length} events`);
-            console.log(`  Afternoon (${afternoonStart.toISOString()} - ${afternoonEnd.toISOString()}): ${afternoonEvents.data.items.length} events`);
+            console.log(`\n========== Date: ${dateKey} ==========`);
+            console.log(`Morning slot (${morningStart.toISOString()} - ${morningEnd.toISOString()}): ${morningEvents.data.items.length} events`);
+            if (morningEvents.data.items.length > 0) {
+                morningEvents.data.items.forEach(event => {
+                    console.log(`  - Event: "${event.summary}"`);
+                    console.log(`    Start: ${event.start.dateTime || event.start.date}`);
+                    console.log(`    End: ${event.end.dateTime || event.end.date}`);
+                });
+            }
+
+            console.log(`\nMidday slot (${middayStart.toISOString()} - ${middayEnd.toISOString()}): ${middayEvents.data.items.length} events`);
+            if (middayEvents.data.items.length > 0) {
+                middayEvents.data.items.forEach(event => {
+                    console.log(`  - Event: "${event.summary}"`);
+                    console.log(`    Start: ${event.start.dateTime || event.start.date}`);
+                    console.log(`    End: ${event.end.dateTime || event.end.date}`);
+                });
+            }
+
+            console.log(`\nAfternoon slot (${afternoonStart.toISOString()} - ${afternoonEnd.toISOString()}): ${afternoonEvents.data.items.length} events`);
+            if (afternoonEvents.data.items.length > 0) {
+                afternoonEvents.data.items.forEach(event => {
+                    console.log(`  - Event: "${event.summary}"`);
+                    console.log(`    Start: ${event.start.dateTime || event.start.date}`);
+                    console.log(`    End: ${event.end.dateTime || event.end.date}`);
+                });
+            }
+            console.log(`========================================\n`);
 
             availability[dateKey] = {
                 morning: morningEvents.data.items.length === 0,

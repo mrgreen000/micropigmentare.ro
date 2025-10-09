@@ -98,20 +98,22 @@ async function checkGoogleCalendarAvailability(weekStart) {
             const dateKey = date.toISOString().split('T')[0];
 
             // Create dates in Romanian timezone (Europe/Bucharest)
-            // Use UTC date string and manually add Romanian time to ensure correct timezone
+            // The Google Calendar API accepts ISO 8601 date-time strings
+            // and interprets them according to the timeZone parameter
             const dateStr = date.toISOString().split('T')[0]; // YYYY-MM-DD
 
+            // Format: YYYY-MM-DDTHH:MM:SS (no timezone, will use timeZone param)
             // Check morning slot (10:00-13:00 Bucharest time, 180 min)
-            const morningStart = new Date(`${dateStr}T10:00:00+03:00`);
-            const morningEnd = new Date(`${dateStr}T13:00:00+03:00`);
+            const morningStart = `${dateStr}T10:00:00`;
+            const morningEnd = `${dateStr}T13:00:00`;
 
             // Check midday slot (13:00-13:30 Bucharest time, 30 min - Laser only)
-            const middayStart = new Date(`${dateStr}T13:00:00+03:00`);
-            const middayEnd = new Date(`${dateStr}T13:30:00+03:00`);
+            const middayStart = `${dateStr}T13:00:00`;
+            const middayEnd = `${dateStr}T13:30:00`;
 
             // Check afternoon slot (13:30-16:30 Bucharest time, 180 min)
-            const afternoonStart = new Date(`${dateStr}T13:30:00+03:00`);
-            const afternoonEnd = new Date(`${dateStr}T16:30:00+03:00`);
+            const afternoonStart = `${dateStr}T13:30:00`;
+            const afternoonEnd = `${dateStr}T16:30:00`;
 
             // Log the calendar ID being used
             console.log(`Checking calendar: ${process.env.GOOGLE_CALENDAR_ID}`);
@@ -120,8 +122,8 @@ async function checkGoogleCalendarAvailability(weekStart) {
             const [morningEvents, middayEvents, afternoonEvents] = await Promise.all([
                 calendar.events.list({
                     calendarId: process.env.GOOGLE_CALENDAR_ID,
-                    timeMin: morningStart.toISOString(),
-                    timeMax: morningEnd.toISOString(),
+                    timeMin: morningStart,
+                    timeMax: morningEnd,
                     singleEvents: true,
                     timeZone: 'Europe/Bucharest',
                 }).catch(err => {
@@ -130,8 +132,8 @@ async function checkGoogleCalendarAvailability(weekStart) {
                 }),
                 calendar.events.list({
                     calendarId: process.env.GOOGLE_CALENDAR_ID,
-                    timeMin: middayStart.toISOString(),
-                    timeMax: middayEnd.toISOString(),
+                    timeMin: middayStart,
+                    timeMax: middayEnd,
                     singleEvents: true,
                     timeZone: 'Europe/Bucharest',
                 }).catch(err => {
@@ -140,8 +142,8 @@ async function checkGoogleCalendarAvailability(weekStart) {
                 }),
                 calendar.events.list({
                     calendarId: process.env.GOOGLE_CALENDAR_ID,
-                    timeMin: afternoonStart.toISOString(),
-                    timeMax: afternoonEnd.toISOString(),
+                    timeMin: afternoonStart,
+                    timeMax: afternoonEnd,
                     singleEvents: true,
                     timeZone: 'Europe/Bucharest',
                 }).catch(err => {
@@ -151,7 +153,7 @@ async function checkGoogleCalendarAvailability(weekStart) {
             ]);
 
             console.log(`\n========== Date: ${dateKey} ==========`);
-            console.log(`Morning slot (${morningStart.toISOString()} - ${morningEnd.toISOString()}): ${morningEvents.data.items.length} events`);
+            console.log(`Morning slot (${morningStart} - ${morningEnd} Bucharest time): ${morningEvents.data.items.length} events`);
             if (morningEvents.data.items.length > 0) {
                 morningEvents.data.items.forEach(event => {
                     console.log(`  - Event: "${event.summary}"`);
@@ -160,7 +162,7 @@ async function checkGoogleCalendarAvailability(weekStart) {
                 });
             }
 
-            console.log(`\nMidday slot (${middayStart.toISOString()} - ${middayEnd.toISOString()}): ${middayEvents.data.items.length} events`);
+            console.log(`\nMidday slot (${middayStart} - ${middayEnd} Bucharest time): ${middayEvents.data.items.length} events`);
             if (middayEvents.data.items.length > 0) {
                 middayEvents.data.items.forEach(event => {
                     console.log(`  - Event: "${event.summary}"`);
@@ -169,7 +171,7 @@ async function checkGoogleCalendarAvailability(weekStart) {
                 });
             }
 
-            console.log(`\nAfternoon slot (${afternoonStart.toISOString()} - ${afternoonEnd.toISOString()}): ${afternoonEvents.data.items.length} events`);
+            console.log(`\nAfternoon slot (${afternoonStart} - ${afternoonEnd} Bucharest time): ${afternoonEvents.data.items.length} events`);
             if (afternoonEvents.data.items.length > 0) {
                 afternoonEvents.data.items.forEach(event => {
                     console.log(`  - Event: "${event.summary}"`);

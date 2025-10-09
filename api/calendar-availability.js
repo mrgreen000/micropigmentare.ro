@@ -1,4 +1,5 @@
 // Vercel Serverless Function for Google Calendar Availability
+// Updated to use CommonJS for better compatibility
 const { google } = require('googleapis');
 
 module.exports = async function handler(req, res) {

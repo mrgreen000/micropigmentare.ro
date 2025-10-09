@@ -37,6 +37,7 @@ export default async function handler(req, res) {
             availability = generateMockAvailability(weekStart);
         } else {
             console.log('Fetching real Google Calendar data');
+            console.log('Calendar ID:', process.env.GOOGLE_CALENDAR_ID);
             availability = await checkGoogleCalendarAvailability(weekStart);
         }
 

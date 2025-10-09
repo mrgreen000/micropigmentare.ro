@@ -63,7 +63,7 @@ The booking calendar uses Google Calendar API to check availability in real-time
 ### 6. Get Your Calendar ID
 
 1. In the same calendar settings page, scroll down to "Integrate calendar"
-2. Copy the **Calendar ID** (usually your email or something like `abc123@group.calendar.google.com`)
+2. Copy the **Calendar ID** (usually your email or something like `abc123@group.calendar.google.com`) (pauline.stanciu@yahoo.com)
 3. Save this - you'll need it for environment variables
 
 ### 7. Set Up Environment Variables

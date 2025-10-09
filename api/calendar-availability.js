@@ -81,6 +81,22 @@ function generateMockAvailability(weekStart) {
     return availability;
 }
 
+// Helper function to convert local Bucharest time to RFC3339 format
+function toBucharestTime(dateStr, timeStr) {
+    // Create a date object for the specific date and time in Bucharest
+    // Bucharest is UTC+2 (EET) in winter, UTC+3 (EEST) in summer
+    const testDate = new Date(`${dateStr}T${timeStr}+02:00`);
+    const month = parseInt(dateStr.split('-')[1]);
+    const day = parseInt(dateStr.split('-')[2]);
+
+    // Rough DST check: EEST is from last Sunday in March to last Sunday in October
+    // For simplicity: March-October use +03:00, November-February use +02:00
+    const isDST = month >= 3 && month <= 10;
+    const offset = isDST ? '+03:00' : '+02:00';
+
+    return `${dateStr}T${timeStr}${offset}`;
+}
+
 // Google Calendar API Integration
 async function checkGoogleCalendarAvailability(weekStart) {
     try {
@@ -98,22 +114,19 @@ async function checkGoogleCalendarAvailability(weekStart) {
             const dateKey = date.toISOString().split('T')[0];
 
             // Create dates in Romanian timezone (Europe/Bucharest)
-            // The Google Calendar API accepts ISO 8601 date-time strings
-            // and interprets them according to the timeZone parameter
             const dateStr = date.toISOString().split('T')[0]; // YYYY-MM-DD
 
-            // Format: YYYY-MM-DDTHH:MM:SS (no timezone, will use timeZone param)
             // Check morning slot (10:00-13:00 Bucharest time, 180 min)
-            const morningStart = `${dateStr}T10:00:00`;
-            const morningEnd = `${dateStr}T13:00:00`;
+            const morningStart = toBucharestTime(dateStr, '10:00:00');
+            const morningEnd = toBucharestTime(dateStr, '13:00:00');
 
             // Check midday slot (13:00-13:30 Bucharest time, 30 min - Laser only)
-            const middayStart = `${dateStr}T13:00:00`;
-            const middayEnd = `${dateStr}T13:30:00`;
+            const middayStart = toBucharestTime(dateStr, '13:00:00');
+            const middayEnd = toBucharestTime(dateStr, '13:30:00');
 
             // Check afternoon slot (13:30-16:30 Bucharest time, 180 min)
-            const afternoonStart = `${dateStr}T13:30:00`;
-            const afternoonEnd = `${dateStr}T16:30:00`;
+            const afternoonStart = toBucharestTime(dateStr, '13:30:00');
+            const afternoonEnd = toBucharestTime(dateStr, '16:30:00');
 
             // Log the calendar ID being used
             console.log(`Checking calendar: ${process.env.GOOGLE_CALENDAR_ID}`);

@@ -36,7 +36,6 @@ Fiecare sedinta incepe cu igienizarea zonei si aplicarea unei anestezii topice c
 
 - Laserul recunoaste culoarea pigmentului si o tinteste selectiv, fara sa afecteze pielea din jur
 - Particulele sfaramate sunt preluate de sistemul limfatic si eliminate natural in urmatoarele saptamani
-- Dupa fiecare sedinta aplicam un ser calmant si un pansament protector pentru primele ore
 
 ![Indepartare pigment cu laser Ploiesti - sedinta in cabinet](../../assets/indepartare-pigment-cu-laser-ploiesti_2.webp)
 
@@ -70,11 +69,7 @@ Majoritatea clientelor au nevoie de 3-6 sedinte, in functie de vechimea pigmentu
 
 ### Cat dureaza rezultatele
 
-Odata eliminat, pigmentul nu revine. Daca planuiesti o noua micropigmentare, recomandam sa astepti minimum 8 saptamani dupa ultima sedinta pentru ca pielea sa se echilibreze.
-
-### Cat costa o sedinta
-
-Planul standard incepe de la 350 lei pe sedinta pentru suprafete mici si poate creste in functie de dimensiune si densitatea pigmentului. In cadrul consultatiei primesti oferta completa si calendarul estimativ.
+Odata eliminat, pigmentul nu revine. Daca planuiesti o noua micropigmentare, recomandam sa astepti minimum 45 de zile dupa ultima sedinta pentru ca pielea sa se echilibreze.
 
 ## Programeaza o consultatie pentru indepartare pigment cu laser Ploiesti
 

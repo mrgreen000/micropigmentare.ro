@@ -4,12 +4,12 @@
     {
       "id": "sprancene-pudrata",
       "name": "Micropigmentare Sprâncene",
-      "subtitle": "Tehnica pudrat",
+      "subtitle": "Tehnica pudrată",
       "duration": "2-3 ore",
       "durationMinutes": 180,
       "price": 1500,
       "tag": "POPULAR",
-      "description": "Prima ședință cu tehnica clasică pentru sprâncene perfect definite și naturale",
+      "description": "Tehnica pudrată oferă un aspect natural și delicat, asemănător machiajului cu fard",
       "icon": "eye"
     },
     {
@@ -20,7 +20,7 @@
       "durationMinutes": 180,
       "price": 1625,
       "tag": "TRENDING",
-      "description": "Prima ședință cu tehnica Powder Brows pentru un efect ombré natural",
+      "description": "Tehnica fir cu fir redă aspectul natural al sprâncenelor prin imitarea firelor reale de păr",
       "icon": "badge"
     },
     {
@@ -31,7 +31,7 @@
       "durationMinutes": 180,
       "price": 1625,
       "tag": "PREMIUM",
-      "description": "Prima ședință pentru contur perfect și culoare naturală",
+      "description": "Micropigmentarea buzelor oferă contur, culoare și volum, evidențiind frumusețea naturală a buzelor",
       "icon": "lips"
     },
     {

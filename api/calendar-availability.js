@@ -72,8 +72,9 @@ function generateMockAvailability(weekStart) {
     const availability = {};
 
     for (let i = 0; i < 5; i++) {
+        // Work in UTC to avoid timezone issues across different Vercel regions
         const date = new Date(weekStart);
-        date.setDate(weekStart.getDate() + i);
+        date.setUTCDate(date.getUTCDate() + i);
         const dateKey = date.toISOString().split('T')[0];
 
         availability[dateKey] = {
@@ -114,12 +115,13 @@ async function checkGoogleCalendarAvailability(weekStart) {
         const availability = {};
 
         for (let i = 0; i < 5; i++) {
+            // Work in UTC to avoid timezone issues across different Vercel regions
             const date = new Date(weekStart);
-            date.setDate(weekStart.getDate() + i);
+            date.setUTCDate(date.getUTCDate() + i);
             const dateKey = date.toISOString().split('T')[0];
 
             // Create dates in Romanian timezone (Europe/Bucharest)
-            const dateStr = date.toISOString().split('T')[0]; // YYYY-MM-DD
+            const dateStr = dateKey; // YYYY-MM-DD
 
             // Check morning slot (10:00-13:00 Bucharest time, 180 min)
             const morningStart = toBucharestTime(dateStr, '10:00:00');

@@ -27,7 +27,9 @@
       "Bash(git cherry-pick:*)",
       "Bash(git checkout:*)",
       "Bash(curl:*)",
-      "Bash(gh run list:*)"
+      "Bash(gh run list:*)",
+      "Bash(git ls-tree:*)",
+      "Bash(cat:*)"
     ],
     "deny": [],
     "ask": []
